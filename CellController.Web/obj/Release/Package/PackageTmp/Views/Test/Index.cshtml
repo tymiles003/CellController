@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+
+
+@section content {
+
+    <link href="~/Content/CustomPanel.css" rel="stylesheet" />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Test</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        Test Sync
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section JavaScript {
+    <script>
+        $(document).ready(function (e) {
+
+            HideLoading();
+        });
+    </script>
+}
+

@@ -1,0 +1,36 @@
+CellController.Equipment, CellController;md5358df2907fe3a35fec6a54efeb1e027e.Equipment
+CellController.Equipment, CellController, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5358df2907fe3a35fec6a54efeb1e027e.Equipment
+CellController.Equipment;md5358df2907fe3a35fec6a54efeb1e027e.Equipment
+cellcontroller.Equipment;md5358df2907fe3a35fec6a54efeb1e027e.Equipment
+CellController.Idle, CellController;md5358df2907fe3a35fec6a54efeb1e027e.Idle
+CellController.Idle, CellController, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5358df2907fe3a35fec6a54efeb1e027e.Idle
+CellController.Idle;md5358df2907fe3a35fec6a54efeb1e027e.Idle
+cellcontroller.Idle;md5358df2907fe3a35fec6a54efeb1e027e.Idle
+CellController.Login, CellController;md5358df2907fe3a35fec6a54efeb1e027e.Login
+CellController.Login, CellController, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5358df2907fe3a35fec6a54efeb1e027e.Login
+CellController.Login;md5358df2907fe3a35fec6a54efeb1e027e.Login
+cellcontroller.Login;md5358df2907fe3a35fec6a54efeb1e027e.Login
+CellController.Offline, CellController;md5358df2907fe3a35fec6a54efeb1e027e.Offline
+CellController.Offline, CellController, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5358df2907fe3a35fec6a54efeb1e027e.Offline
+CellController.Offline;md5358df2907fe3a35fec6a54efeb1e027e.Offline
+cellcontroller.Offline;md5358df2907fe3a35fec6a54efeb1e027e.Offline
+CellController.Online, CellController;md5358df2907fe3a35fec6a54efeb1e027e.Online
+CellController.Online, CellController, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5358df2907fe3a35fec6a54efeb1e027e.Online
+CellController.Online;md5358df2907fe3a35fec6a54efeb1e027e.Online
+cellcontroller.Online;md5358df2907fe3a35fec6a54efeb1e027e.Online
+CellController.SplashActivity, CellController;md5358df2907fe3a35fec6a54efeb1e027e.SplashActivity
+CellController.SplashActivity, CellController, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5358df2907fe3a35fec6a54efeb1e027e.SplashActivity
+CellController.SplashActivity;md5358df2907fe3a35fec6a54efeb1e027e.SplashActivity
+cellcontroller.SplashActivity;md5358df2907fe3a35fec6a54efeb1e027e.SplashActivity
+CellController.TrackIn, CellController;md5358df2907fe3a35fec6a54efeb1e027e.TrackIn
+CellController.TrackIn, CellController, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5358df2907fe3a35fec6a54efeb1e027e.TrackIn
+CellController.TrackIn;md5358df2907fe3a35fec6a54efeb1e027e.TrackIn
+cellcontroller.TrackIn;md5358df2907fe3a35fec6a54efeb1e027e.TrackIn
+AChartEngine.Tools.IPanListenerImplementor, AChartEngine.Bindings.XamarinAndroid;mono.org.achartengine.tools.PanListenerImplementor
+AChartEngine.Tools.IPanListenerImplementor, AChartEngine.Bindings.XamarinAndroid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.org.achartengine.tools.PanListenerImplementor
+AChartEngine.Tools.IPanListenerImplementor;mono.org.achartengine.tools.PanListenerImplementor
+mono.org.achartengine.tools.PanListenerImplementor;mono.org.achartengine.tools.PanListenerImplementor
+AChartEngine.Tools.IZoomListenerImplementor, AChartEngine.Bindings.XamarinAndroid;mono.org.achartengine.tools.ZoomListenerImplementor
+AChartEngine.Tools.IZoomListenerImplementor, AChartEngine.Bindings.XamarinAndroid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.org.achartengine.tools.ZoomListenerImplementor
+AChartEngine.Tools.IZoomListenerImplementor;mono.org.achartengine.tools.ZoomListenerImplementor
+mono.org.achartengine.tools.ZoomListenerImplementor;mono.org.achartengine.tools.ZoomListenerImplementor

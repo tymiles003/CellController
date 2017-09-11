@@ -1,0 +1,8 @@
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SECSGEMCharacterization\bin\TestWebApplication.dll.config
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SECSGEMCharacterization\bin\TestWebApplication.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SECSGEMCharacterization\bin\TestWebApplication.pdb
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SECSGEMCharacterization\obj\Release\TestWebApplication.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SECSGEMCharacterization\obj\Release\TestWebApplication.pdb
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SECSGEMCharacterization\obj\Release\SECSGEMCharacterization.csprojResolveAssemblyReference.cache
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SECSGEMCharacterization\bin\Newtonsoft.Json.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SECSGEMCharacterization\bin\Newtonsoft.Json.xml

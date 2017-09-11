@@ -1,0 +1,183 @@
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe.config
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.CSharp.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Owin.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Configuration.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Configuration.Install.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Data.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Management.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Net.Http.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.ServiceProcess.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Web.Cors.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\TableDependency.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\TableDependency.SqlClient.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.ProjectInstaller.resources
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.csproj.GenerateResource.Cache
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe.config
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.CSharp.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Owin.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Configuration.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Configuration.Install.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Data.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Management.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Net.Http.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.ServiceProcess.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Web.Cors.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.ProjectInstaller.resources
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.csproj.GenerateResource.Cache
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe.config
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.CSharp.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Owin.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Configuration.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Configuration.Install.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Data.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Management.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Net.Http.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.ServiceProcess.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Web.Cors.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.ProjectInstaller.resources
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.csproj.GenerateResource.Cache
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\SignalRWindowsService\obj\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe.config
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.CSharp.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Owin.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Configuration.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Configuration.Install.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Data.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Management.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Net.Http.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.ServiceProcess.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Web.Cors.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.ProjectInstaller.resources
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.csproj.GenerateResource.Cache
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.csprojResolveAssemblyReference.cache
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe.config
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\SignalRWindowsService.pdb
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.CSharp.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Owin.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Configuration.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Configuration.Install.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Data.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Management.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Net.Http.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.ServiceProcess.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Web.Cors.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Cors.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Diagnostics.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.ProjectInstaller.resources
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.csproj.GenerateResource.Cache
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.exe
+C:\Users\wmorata\Source\Repos\IgnitionCellController\SignalRWindowsService\obj\Debug\SignalRWindowsService.pdb

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/linearLayoutMain"
+    android:background="#191919">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout13">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:background="@drawable/return2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/return2" />
+        <TextView
+            android:text="Back"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lblBack"
+            android:gravity="center" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout24"
+            android:gravity="right">
+            <TextView
+                android:text="DA-086_KNS"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/txtEquipment"
+                android:textStyle="bold"
+                android:textColor="#2196F3"
+                android:textSize="40sp"
+                android:gravity="right"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/linearLayoutLotInformation"
+        android:gravity="left"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/equipmentborder">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout14"
+            android:layout_marginLeft="30dp"
+            android:gravity="center">
+            <TextView
+                android:text="Lot Information [Last processed]"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblLotInformation"
+                android:textColor="#2196F3" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/linearLayoutLotDetails"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Lot: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblLot"
+                    android:gravity="right" />
+                <TextView
+                    android:text="1610950DDAA"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtLot"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayoutProductName"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Product Name: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblProductName"
+                    android:gravity="right" />
+                <TextView
+                    android:text="1770TKC-000"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtProductName"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout17"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Total Quantity: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblTotalQuantity"
+                    android:gravity="right" />
+                <TextView
+                    android:text="1250"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtTotalQuantity"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#2196F3" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout15"
+            android:layout_marginLeft="20dp"
+            android:gravity="center">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/linearLayoutRecipe"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp">
+                <TextView
+                    android:text="Recipe: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblRecipe"
+                    android:gravity="right" />
+                <TextView
+                    android:text="P9179TSL-TSL8038"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtRecipe"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Pkg Group: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblPkgGroup"
+                    android:gravity="right" />
+                <TextView
+                    android:text="K-Matrix"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtPkgGroup"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Product Line: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblProductLine"
+                    android:gravity="right" />
+                <TextView
+                    android:text="TKC"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtProductLine"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout16"
+            android:layout_marginLeft="20dp"
+            android:gravity="center">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Pkg Dev: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblPkgDev"
+                    android:gravity="right" />
+                <TextView
+                    android:text="1770TKC"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtPkgDev"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:text="Specs Name: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblSpecsName"
+                    android:gravity="right" />
+                <TextView
+                    android:text="2200 BELLY BRAND / RECODE"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtSpecsName"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutLowerMain"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="618dp"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout18"
+            android:background="@drawable/equipmentborder">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout21"
+                android:gravity="center|bottom"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:text="100"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lbl100"
+                    android:gravity="bottom"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="305dp"
+                android:id="@+id/relativeLayoutPie">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="285dp"
+                    android:id="@+id/linearLayoutPieHolder" />
+                <ImageView
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:id="@+id/imageView1"
+                    android:layout_marginTop="12.0dp"
+                    android:layout_marginLeft="179.0dp"
+                    android:background="@drawable/oval" />
+                <TextView
+                    android:text="75"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl75"
+                    android:textColor="#ffffff"
+                    android:rotation="270"
+                    android:layout_marginTop="-323dp"
+                    android:layout_marginLeft="-305dp" />
+                <TextView
+                    android:text="25"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl25"
+                    android:layout_marginLeft="453.0dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="130.0dp"
+                    android:rotation="90" />
+                <TextView
+                    android:text="100%"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtInProgressPercentage"
+                    android:textColor="#2196F3"
+                    android:textSize="60sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="100.0dp"
+                    android:layout_centerHorizontal="true" />
+                <TextView
+                    android:text="50"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl50"
+                    android:layout_marginLeft="302.0dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="285dp" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout20"
+                android:gravity="center"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:text="1250"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtInProgressQuantity"
+                    android:textSize="60sp"
+                    android:gravity="bottom"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3" />
+                <TextView
+                    android:text="In Progress"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblInProgress"
+                    android:layout_marginLeft="15.0dp"
+                    android:gravity="bottom"
+                    android:textStyle="bold"
+                    android:paddingBottom="11dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="618dp"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout19"
+            android:layout_marginLeft="15dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:id="@+id/linearLayout22"
+                android:background="@drawable/equipmentborder"
+                android:gravity="center">
+                <TextView
+                    android:text="N / A"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtYieldPercentage"
+                    android:gravity="center"
+                    android:textSize="60sp"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3" />
+                <TextView
+                    android:text="Yield"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblYield"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:paddingTop="20dp"
+                    android:layout_marginLeft="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="229dp"
+                android:id="@+id/linearLayout23"
+                android:background="@drawable/equipmentborder"
+                android:layout_marginTop="15dp"
+                android:gravity="center">
+                <Button
+                    android:text="TRACK-IN"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/btnTrackin"
+                    android:background="@drawable/bluebutton"
+                    android:textSize="20sp"
+                    android:drawableLeft="@drawable/trackindesign" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

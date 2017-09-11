@@ -1,0 +1,1328 @@
+﻿@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+
+@model List<CellController.Web.ViewModels.EnrolledEquipment>
+
+@section content {
+
+    <link rel="stylesheet" href="~/Content/Home.css">
+    <link rel="stylesheet" href="~/Content/ContextMenu.css" />
+    <script src="~/Scripts/pages/home_UIControl.js"></script>
+   
+    <div class="row">
+        <div class="col-lg-3 col-md-6" id="divNoEquipment" style="display:none;"><p style="font-weight:bold;">You don't have enrolled equipments. Contact the administrator.</p></div>
+
+        @*this ul is for the context menu*@
+        <ul class='custom-menu' style="box-shadow: 5px 5px 5px #888888;">
+            <li data-action="Title" id="menuTitle" style="background-color:#34425A;color:#ffffff;">Machine Name</li>
+            <li data-action="TrackIn" id="menuTrackIn"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Track In</li>
+            <li data-action="TrackOut" id="menuTrackOut"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Track Out</li>
+            <li data-action="WIPData" id="menuWIPData"><span class="fa fa-balance-scale"></span>&nbsp;Data Collection</li>
+            <li data-action="EProcedure" id="menuEProc"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;EProcedure</li>
+            <li data-action="Engineer" id="menuEngineer"><span class="glyphicon glyphicon-subtitles"></span>&nbsp;Engineering Mode</li>
+        </ul>
+
+        @if (Model != null)
+        {
+            if (Model.Count > 0)
+            {
+                string text1 = "";
+                if (Model.Count > 1)
+                {
+                    text1 = "Machines:";
+                }
+                else
+                {
+                    text1 = "Machine:";
+                }
+                <div class="col-lg-3 col-md-6"><p style="font-weight:bold;">@text1</p></div><br /><br />
+            }
+        }
+
+        <div id="divDummy" style="display:none;"></div>
+
+        @try
+        {
+            List<string> lstOffline = new List<string>();
+            List<string> lstOnline = new List<string>();
+            List<string> lstIdle = new List<string>();
+            List<string> lstWarning = new List<string>();
+
+            try
+            {
+                DateTime now = DateTime.Now;
+                HttpCookie cookieisSignalR = new HttpCookie("isSignalR");
+                cookieisSignalR.Value = Common.isSignalR().ToString();
+                cookieisSignalR.Expires = now.AddDays(30);
+                HttpContext.Current.Response.Cookies.Add(cookieisSignalR);
+            }
+            catch { }
+
+            //this loop will generate dynamic place holder divs for each equipment the user has enrolled to
+            foreach (var item in Model)
+            {
+                var divWarning = "divEquipment_" + item.Equipment + "_Warning";
+                var divOnline = "divEquipment_" + item.Equipment + "_Online";
+                var divOffline = "divEquipment_" + item.Equipment + "_Offline";
+                var divIdle = "divEquipment_" + item.Equipment + "_Idle";
+
+                var divPanelWarning = "divPanel_" + item.Equipment + "_Warning";
+                var divPanelOnline = "divPanel_" + item.Equipment + "_Online";
+                var divPanelOffline = "divPanel_" + item.Equipment + "_Offline";
+                var divPanelIdle = "divPanel_" + item.Equipment + "_Idle";
+
+                var divAlarmWarning = "divAlarm_" + item.Equipment + "_Warning";
+                var divAlarmOnline = "divAlarm_" + item.Equipment + "_Online";
+                var divAlarmOffline = "divAlarm_" + item.Equipment + "_Offline";
+                var divAlarmIdle = "divAlarm_" + item.Equipment + "_Idle";
+
+                var lblAlarmWarning = "lblAlarm_" + item.Equipment + "_Warning";
+                var lblAlarmOnline = "lblAlarm_" + item.Equipment + "_Online";
+                var lblAlarmOffline = "lblAlarm_" + item.Equipment + "_Offline";
+                var lblAlarmIdle = "lblAlarm_" + item.Equipment + "_Idle";
+
+                var lblProcessWarning = "lblProcess_" + item.Equipment + "_Warning";
+                var lblProcessOnline = "lblProcess_" + item.Equipment + "_Online";
+                var lblProcessOffline = "lblProcess_" + item.Equipment + "_Offline";
+                var lblProcessIdle = "lblProcess_" + item.Equipment + "_Idle";
+
+                var lblBrandedQtyWarning = "lblBranded_" + item.Equipment + "_Warning";
+                var lblBrandedQtyOnline = "lblBranded_" + item.Equipment + "_Online";
+                var lblBrandedQtyOffline = "lblBranded_" + item.Equipment + "_Offline";
+                var lblBrandedQtyIdle = "lblBranded_" + item.Equipment + "_Idle";
+
+                var lblUnbrandedQtyWarning = "lblUnbranded_" + item.Equipment + "_Warning";
+                var lblUnbrandedQtyOnline = "lblUnbranded_" + item.Equipment + "_Online";
+                var lblUnbrandedQtyOffline = "lblUnbranded_" + item.Equipment + "_Offline";
+                var lblUnbrandedQtyIdle = "lblUnbranded_" + item.Equipment + "_Idle";
+
+                var lblLeftCounterWarning = "lblLeftCounter_" + item.Equipment + "_Warning";
+                var lblLeftCounterOnline = "lblLeftCounter_" + item.Equipment + "_Online";
+                var lblLeftCounterOffline = "lblLeftCounter_" + item.Equipment + "_Offline";
+                var lblLeftCounterIdle = "lblLeftCounter_" + item.Equipment + "_Idle";
+
+                var lblLeftCounterPrintWarning = "lblLeftCounterPrint_" + item.Equipment + "_Warning";
+                var lblLeftCounterPrintOnline = "lblLeftCounterPrint_" + item.Equipment + "_Online";
+                var lblLeftCounterPrintOffline = "lblLeftCounterPrint_" + item.Equipment + "_Offline";
+                var lblLeftCounterPrintIdle = "lblLeftCounterPrint_" + item.Equipment + "_Idle";
+
+                var lblRightCounterWarning = "lblRightCounter_" + item.Equipment + "_Warning";
+                var lblRightCounterOnline = "lblRightCounter_" + item.Equipment + "_Online";
+                var lblRightCounterOffline = "lblRightCounter_" + item.Equipment + "_Offline";
+                var lblRightCounterIdle = "lblRightCounter_" + item.Equipment + "_Idle";
+
+                var lblRightCounterPrintWarning = "lblRightCounterPrint_" + item.Equipment + "_Warning";
+                var lblRightCounterPrintOnline = "lblRightCounterPrint_" + item.Equipment + "_Online";
+                var lblRightCounterPrintOffline = "lblRightCounterPrint_" + item.Equipment + "_Offline";
+                var lblRightCounterPrintIdle = "lblRightCounterPrint_" + item.Equipment + "_Idle";
+
+                var divProcessingWarning = "divProcessing_" + item.Equipment + "_Warning";
+                var divProcessingOnline = "divProcessing_" + item.Equipment + "_Online";
+                var divProcessingOffline = "divProcessing_" + item.Equipment + "_Offline";
+                var divProcessingIdle = "divProcessing_" + item.Equipment + "_Idle";
+
+                var divPrintWarning = "divPrint_" + item.Equipment + "_Warning";
+                var divPrintOnline = "divPrint_" + item.Equipment + "_Online";
+                var divPrintOffline = "divPrint_" + item.Equipment + "_Offline";
+                var divPrintIdle = "divPrint_" + item.Equipment + "_Idle";
+
+                var btnPrintWarning = "btnPrint_" + item.Equipment + "_Warning";
+                var btnPrintOnline = "btnPrint_" + item.Equipment + "_Online";
+                var btnPrintOffline = "btnPrint_" + item.Equipment + "_Offline";
+                var btnPrintIdle = "btnPrint_" + item.Equipment + "_Idle";
+
+                var btnSpanPrintAllowedWarning = "btnSpanPrintAllowed_" + item.Equipment + "_Warning";
+                var btnSpanPrintAllowedOnline = "btnSpanPrintAllowed_" + item.Equipment + "_Online";
+                var btnSpanPrintAllowedOffline = "btnSpanPrintAllowed_" + item.Equipment + "_Offline";
+                var btnSpanPrintAllowedIdle = "btnSpanPrintAllowed_" + item.Equipment + "_Idle";
+
+                var divNotProcessingWarning = "divNotProcessing_" + item.Equipment + "_Warning";
+                var divNotProcessingOnline = "divNotProcessing_" + item.Equipment + "_Online";
+                var divNotProcessingOffline = "divNotProcessing_" + item.Equipment + "_Offline";
+                var divNotProcessingIdle = "divNotProcessing_" + item.Equipment + "_Idle";
+
+                var ProgressBarWarning = "ProgressBar_" + item.Equipment + "_Warning";
+                var ProgressBarOnline = "ProgressBar_" + item.Equipment + "_Online";
+                var ProgressBarOffline = "ProgressBar_" + item.Equipment + "_Offline";
+                var ProgressBarIdle = "ProgressBar_" + item.Equipment + "_Idle";
+
+                var QtyDivWarning = "QtyDiv_" + item.Equipment + "_Warning";
+                var QtyDivOnline = "QtyDiv_" + item.Equipment + "_Online";
+                var QtyDivOffline = "QtyDiv_" + item.Equipment + "_Offline";
+                var QtyDivIdle = "QtyDiv_" + item.Equipment + "_Idle";
+
+                var divUnitWarning = "UnitsDiv_" + item.Equipment + "_Warning";
+                var divUnitOnline = "UnitsDiv_" + item.Equipment + "_Online";
+                var divUnitOffline = "UnitsDiv_" + item.Equipment + "_Offline";
+                var divUnitIdle = "UnitsDiv_" + item.Equipment + "_Idle";
+
+                var lblUnitWarning = "lblUnits_" + item.Equipment + "_Warning";
+                var lblUnitOnline = "lblUnits_" + item.Equipment + "_Online";
+                var lblUnitOffline = "lblUnits_" + item.Equipment + "_Offline";
+                var lblUnitIdle = "lblUnits_" + item.Equipment + "_Idle";
+
+                var lblLotNameWarning = "lblLotName_" + item.Equipment + "_Warning";
+                var lblLotNameOnline = "lblLotName_" + item.Equipment + "_Online";
+                var lblLotNameOffline = "lblLotName_" + item.Equipment + "_Offline";
+                var lblLotNameIdle = "lblLotName_" + item.Equipment + "_Idle";
+
+                var status = Common.GetEquipmentStatus(item.Equipment);
+                var count = Common.GetAlarmCount(item.Equipment);
+                var equipType = item.Type;
+                var isSECSGEM = item.isSECSGEM;
+
+                var LotNo = "";
+
+                var EquipCount = Convert.ToInt32(Session["EquipCount"].ToString());
+
+                var Reel = Common.GetReel(item.Equipment);
+                var strCurrentReel = "0";
+                var strTotalReel = "0";
+                var strAllowedReel = "0";
+                var allowPrint = false;
+                if (Reel != null)
+                {
+                    strCurrentReel = Reel.CurrentReel.ToString();
+                    strTotalReel = Reel.TotalReel.ToString();
+                    strAllowedReel = Reel.AllowedReel.ToString();
+                }
+
+                if (strAllowedReel.ToString() == "0")
+                {
+                    allowPrint = false;
+                }
+                else
+                {
+                    allowPrint = true;
+                }
+
+                if (isSECSGEM == false)
+                {
+                    status = Common.GetEquipmentStatusTCP(item.Equipment, item.Port);
+                    count = Common.GetNewAlarmCountTCP(item.Equipment);
+                }
+
+                var alarmCount = "";
+
+                if (count > 999)
+                {
+                    alarmCount = count.ToString() + "+";
+                }
+                else
+                {
+                    alarmCount = count.ToString();
+                }
+
+                var TrackInCount = Common.GetTrackInQty(item.Equipment);
+                var strTrackInCount = TrackInCount.ToString();
+
+                var ProcessedCount = 0;
+                var UnitsCount = 0;
+                if (isSECSGEM == true)
+                {
+                    ProcessedCount = Common.GetSECSGEMProcessedQty(item.Equipment);
+                    UnitsCount = Common.GetSECSGEMProcessedQtyInUnits(item.Equipment);
+                }
+                else
+                {
+                    if (item.Type == "LASER MARK TEST")
+                    {
+                        ProcessedCount = Common.GetProcessedQty(item.Equipment);
+                    }
+                }
+                var strProcessedCount = ProcessedCount.ToString();
+                var UnitStyle = "";
+
+                if (item.Type == "DEK PRINTER" || item.Type == "PANASONIC COMPONENT ATTACH" || item.Type == "HELLER OVEN")
+                {
+                    UnitStyle = "display:block;";
+                }
+                else
+                {
+                    UnitStyle = "display:none;";
+                }
+
+
+                var ProcessingStyle = "";
+                var PrintStyle = "";
+                var NotProcessingStyle = "";
+                var LotStyle = "";
+                var ProcessingStyleBranded = "";
+
+                var PercentStyle = "";
+
+                var ProcessingText = "";
+
+                var BrandedQty = Common.GetBrandedQty(item.Equipment);
+                var UnbrandedQty = Common.GetUnbrandedQty(item.Equipment);
+
+                if (TrackInCount == 0)
+                {
+                    ProcessingStyle = "display:none;";
+                    PrintStyle = "display:none;";
+                    ProcessingStyleBranded = "display:none;";
+                    NotProcessingStyle = "display:block;";
+                    PercentStyle = "width:100%;";
+                }
+                else
+                {
+                    ProcessingStyle = "display:block;";
+                    NotProcessingStyle = "display:none;";
+
+                    LotNo = Common.GetLotInProcess(item.Equipment);
+
+                    if(item.Type == "LASER MARK TEST")
+                    {
+                        ProcessingStyleBranded = "display:block;";
+                        PrintStyle = "display:block;";
+                    }
+                    else
+                    {
+                        ProcessingStyleBranded = "display:none;";
+                        PrintStyle = "display:none;";
+                    }
+
+                    double percentage = (Convert.ToDouble(ProcessedCount) / Convert.ToDouble(TrackInCount)) * 100;
+                    if (percentage >= 100)
+                    {
+                        ProcessingText = "Done Processing:";
+                    }
+                    else
+                    {
+                        ProcessingText = "Processing:";
+                    }
+                    PercentStyle = "width:" + percentage.ToString() + "%" + ";";
+                }
+
+                if(LotNo != "" && LotNo != null )
+                {
+                    LotStyle = "display:block;font-weight:bold;";
+                }
+                else
+                {
+                    LotNo = "N/A";
+                    //LotStyle = "display:none;";
+                    LotStyle = "display:block;font-weight:bold;";
+                }
+
+                <div class="col-lg-3 col-md-6" id="@divOffline" style="display:none;">
+                    <div class="panel info-box panel-white" id="@divPanelOffline" style="cursor:pointer;">
+                        <div class="panel-body">
+                            <div class="info-box-stats">
+                                @*<p class="counter">@item.Equipment</p>*@
+                                <p style="font-weight:bold;">@item.Equipment</p>
+                                <span class="info-box-title" style="display:none;">5000</span>
+                                <span class="info-box-title" style="color:#F25656;font-weight:bold;">Offline</span>
+                            </div>
+                            <div class="info-box-icon">
+                                @*<i class="glyphicon glyphicon-envelope"><span>asd</span></i>*@
+                                <div class="notification-icon">
+                                    @*<span class="glyphicon glyphicon-envelope"></span>*@
+                                    <span style="cursor:pointer;" class="badge badgeBackcolorDiv" id="@divAlarmOffline"><label style="cursor:pointer;" class="AlarmFont" id="@lblAlarmOffline">@alarmCount</label></span>
+                                </div>
+                            </div>
+                            <div class="info-box-progress">
+                                <div><label id="@lblLotNameOffline" style="@LotStyle">@LotNo</label></div>
+                                <div><label>Cannot communicate with machine</label></div>
+                                <div class="progress progress-xs progress-squared bs-n">
+                                    <div id="@ProgressBarOffline" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" id="@divWarning" style="display:none;">
+                    <div class="panel info-box panel-white" id="@divPanelWarning" style="cursor:pointer;">
+                        <div class="panel-body">
+                            <div class="info-box-stats">
+                                @*<p class="counter">@item.Equipment</p>*@
+                                <p style="font-weight:bold;">@item.Equipment</p>
+                                <span class="info-box-title" style="display:none;">5000</span>
+                                <span class="info-box-title" style="color:#D1B52B;font-weight:bold;">Warning</span>
+                            </div>
+                            <div class="info-box-icon">
+                                @*<i class="glyphicon glyphicon-envelope"><span>asd</span></i>*@
+                                <div class="notification-icon">
+                                    @*<span class="glyphicon glyphicon-envelope"></span>*@
+                                    <span style="cursor:pointer;" class="badge badgeBackcolorDiv" id="@divAlarmWarning"><label style="cursor:pointer;" class="AlarmFont" id="@lblAlarmWarning">@alarmCount</label></span>
+                                </div>
+                            </div>
+                            <div class="info-box-progress">
+                                <div><label id="@lblLotNameWarning" style="@LotStyle">@LotNo</label></div>
+                                <div><label>Machine has warnings</label></div>
+                                <div class="progress progress-xs progress-squared bs-n">
+                                    <div id="@ProgressBarWarning" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" id="@divOnline" style="display:none;">
+                    <div class="panel info-box panel-white" id="@divPanelOnline" style="cursor:pointer;">
+                        <div class="panel-body">
+                            <div class="info-box-stats">
+                                @*<p class="counter">@item.Equipment</p>*@
+                                <p style="font-weight:bold;">@item.Equipment</p>
+                                <span class="info-box-title" style="display:none;">5000</span>
+                                <span class="info-box-title" style="color:#1C9E88;font-weight:bold;">Online</span>
+                            </div>
+                            <div class="info-box-icon">
+                                @*<i class="glyphicon glyphicon-envelope"><span>asd</span></i>*@
+                                <div class="notification-icon">
+                                    @*<span class="glyphicon glyphicon-envelope"></span>*@
+                                    <span class="badge badgeBackcolorDiv" style="cursor:pointer;" id="@divAlarmOnline"><label style="cursor:pointer;" class="AlarmFont" id="@lblAlarmOnline">@alarmCount</label></span>
+                                </div>
+                            </div>
+                            <div class="info-box-progress">
+                                <div><label id="@lblLotNameOnline" style="@LotStyle">@LotNo</label></div>
+                                <div id="@divPrintOnline" style="@PrintStyle">
+                                    <label>Label Print:&nbsp;</label><label id="@lblLeftCounterPrintOnline">@strCurrentReel</label>&nbsp;/&nbsp;<label id="@lblRightCounterPrintOnline">@strTotalReel</label>
+                                    @if (allowPrint == true)
+                                    {
+                                        
+                                        <button id="@btnPrintOnline" style="display:inline;" type="button" class="btn-xs btn-info"><span data-toggle="tooltip" title="Print Label" class="glyphicon glyphicon-print"></span>&nbsp;<span id="@btnSpanPrintAllowedOnline">@strAllowedReel</span></button>
+                                    }
+                                    else
+                                    {
+                                        <button id="@btnPrintOnline" style="display:none;" type="button" class="btn-xs btn-info"><span data-toggle="tooltip" title="Print Label" class="glyphicon glyphicon-print"></span>&nbsp;<span id="@btnSpanPrintAllowedOnline">@strAllowedReel</span></button>
+                                    }
+                                </div>
+                                <div id="@QtyDivOnline" style="@ProcessingStyleBranded">
+                                    Branded Quantity:&nbsp;<label id="@lblBrandedQtyOnline">@BrandedQty</label>
+                                    <br />
+                                    Unbranded Quantity:&nbsp;<label id="@lblUnbrandedQtyOnline">@UnbrandedQty</label>
+                                </div>
+                                <div id="@divUnitOnline" style="@UnitStyle">
+                                   <label>Units:&nbsp;</label><label id="@lblUnitOnline">@UnitsCount</label>
+                                </div>
+                                <div id="@divProcessingOnline" style="@ProcessingStyle">
+                                    <label id="@lblProcessOnline">@ProcessingText&nbsp;</label><label id="@lblLeftCounterOnline">@strProcessedCount</label>&nbsp;/&nbsp;<label id="@lblRightCounterOnline">@strTrackInCount</label>
+                                </div>
+                                <div id="@divNotProcessingOnline" style="@NotProcessingStyle">
+                                    <label>Not Processing</label>
+                                </div>
+                                <div class="progress progress-xs progress-squared bs-n">
+                                    <div id="@ProgressBarOnline" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="@PercentStyle">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" id="@divIdle" style="display:none;">
+                    <div class="panel info-box panel-white" id="@divPanelIdle" style="cursor:pointer;">
+                        <div class="panel-body">
+                            <div class="info-box-stats">
+                                @*<p class="counter">5000</p>*@
+                                <p style="font-weight:bold;">@item.Equipment</p>
+                                <span class="info-box-title" style="display:none;">5000</span>
+                                <span class="info-box-title" style="color:#0F95AD;font-weight:bold;">Idle</span>
+                            </div>
+                            <div class="info-box-icon">
+                                @*<i class="glyphicon glyphicon-envelope"><span>asd</span></i>*@
+                                <div class="notification-icon">
+                                    @*<span class="glyphicon glyphicon-envelope"></span>*@
+                                    <span style="cursor:pointer;" class="badge badgeBackcolorDiv" id="@divAlarmIdle"><label style="cursor:pointer;" class="AlarmFont" id="@lblAlarmIdle">@alarmCount</label></span>
+                                </div>
+                            </div>
+                            <div class="info-box-progress">
+                                <div><label id="@lblLotNameIdle" style="@LotStyle">@LotNo</label></div>
+                                <div><label>Awaiting Process</label></div>
+                                <div class="progress progress-xs progress-squared bs-n">
+                                    <div id="@ProgressBarIdle" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                ViewBag.DivOffline = divOffline;
+                ViewBag.DivOnline = divOnline;
+                ViewBag.DivIdle = divIdle;
+                ViewBag.DivWarning = divWarning;
+
+                ViewBag.DivPanelOffline = divPanelOffline;
+                ViewBag.DivPanelOnline = divPanelOnline;
+                ViewBag.DivPanelIdle = divPanelIdle;
+                ViewBag.DivPanelWarning = divPanelWarning;
+
+                ViewBag.DivAlarmOffline = divAlarmOffline;
+                ViewBag.DivAlarmOnline = divAlarmOnline;
+                ViewBag.DivAlarmIdle = divAlarmIdle;
+                ViewBag.DivAlarmWarning = divAlarmWarning;
+
+                ViewBag.Equip = item.Equipment;
+                ViewBag.IsSECSGEM = isSECSGEM;
+                ViewBag.LotNo = LotNo;
+
+                lstOffline.Add(divOffline);
+                lstOnline.Add(divOnline);
+                lstIdle.Add(divIdle);
+                lstWarning.Add(divWarning);
+
+                <script type="text/javascript">
+
+                    @*@if (isSECSGEM == true)
+                    {
+                        if (status.ToUpper() == "OFFLINE")
+                        {
+                            @:show('@ViewBag.DivOffline');
+                            @:hide('@ViewBag.DivOnline');
+                            @:hide('@ViewBag.DivIdle');
+                            @:hide('@ViewBag.DivWarning');
+                        }
+                        else if (status.ToUpper() == "ONLINE")
+                        {
+
+                            @:show('@ViewBag.DivOnline');
+                            @:hide('@ViewBag.DivOffline');
+                            @:hide('@ViewBag.DivIdle');
+                            @:hide('@ViewBag.DivWarning');
+                        }
+                        else if (status.ToUpper() == "IDLE")
+                        {
+                            @:show('@ViewBag.DivIdle');
+                            @:hide('@ViewBag.DivOnline');
+                            @:hide('@ViewBag.DivOffline');
+                            @:hide('@ViewBag.DivWarning');
+                        }
+                        else if (status.ToUpper() == "WARNING")
+                        {
+                            @:hide('@ViewBag.DivIdle');
+                            @:hide('@ViewBag.DivOnline');
+                            @:hide('@ViewBag.DivOffline');
+                            @:show('@ViewBag.DivWarning');
+                        }
+                    }
+                    else
+                    {
+                        @:hide('@ViewBag.DivWarning');
+                        @:hide('@ViewBag.DivOnline');
+                        @:hide('@ViewBag.DivOffline');
+                        @:hide('@ViewBag.DivIdle');
+                        //for temporary, because we cant get status of machine without secs/gem
+                        @:show('@ViewBag.DivWarning');
+                    }*@
+
+                    @if (status.ToUpper() == "OFFLINE")
+                    {
+                        @:show('@ViewBag.DivOffline');
+                        @:hide('@ViewBag.DivOnline');
+                        @:hide('@ViewBag.DivIdle');
+                        @:hide('@ViewBag.DivWarning');
+                    }
+                    else if (status.ToUpper() == "ONLINE")
+                    {
+                        @:show('@ViewBag.DivOnline');
+                        @:hide('@ViewBag.DivOffline');
+                        @:hide('@ViewBag.DivIdle');
+                        @:hide('@ViewBag.DivWarning');
+                    }
+                    else if (status.ToUpper() == "IDLE")
+                    {
+                        @:show('@ViewBag.DivIdle');
+                        @:hide('@ViewBag.DivOnline');
+                        @:hide('@ViewBag.DivOffline');
+                        @:hide('@ViewBag.DivWarning');
+                    }
+                    else if (status.ToUpper() == "WARNING")
+                    {
+                        @:hide('@ViewBag.DivIdle');
+                        @:hide('@ViewBag.DivOnline');
+                        @:hide('@ViewBag.DivOffline');
+                        @:show('@ViewBag.DivWarning');
+                    }
+
+                    @if (count == 0)
+                    {
+                        @:hide('@ViewBag.DivAlarmOffline');
+                        @:hide('@ViewBag.DivAlarmOnline');
+                        @:hide('@ViewBag.DivAlarmIdle');
+                        @:hide('@ViewBag.DivAlarmWarning');
+                    }
+                    else
+                    {
+                        @:show('@ViewBag.DivAlarmOffline');
+                        @:show('@ViewBag.DivAlarmOnline');
+                        @:show('@ViewBag.DivAlarmIdle');
+                        @:show('@ViewBag.DivAlarmWarning');
+                    }
+
+                    var clickHandler = '@ViewBag.DivAlarmOffline';
+                    var clickHandler2 = '@ViewBag.DivPanelOffline';
+                    document.getElementById(clickHandler).onclick = function () {
+                        showInbox('@ViewBag.Equip', '@ViewBag.IsSECSGEM', '@ViewBag.LotNo');
+                    }
+                    @*document.getElementById(clickHandler2).onclick = function () {
+                        showInbox('@ViewBag.Equip', '@ViewBag.IsSECSGEM', '@ViewBag.LotNo');
+                    }*@
+
+                    clickHandler = '@ViewBag.DivAlarmOnline';
+                    clickHandler2 = '@ViewBag.DivPanelOnline';
+                    document.getElementById(clickHandler).onclick = function ()
+                    {
+                        showInbox('@ViewBag.Equip', '@ViewBag.IsSECSGEM', '@ViewBag.LotNo');
+                    }
+                    @*document.getElementById(clickHandler2).onclick = function () {
+                        showInbox('@ViewBag.Equip', '@ViewBag.IsSECSGEM', '@ViewBag.LotNo');
+                    }*@
+
+                    clickHandler = '@ViewBag.DivAlarmIdle';
+                    clickHandler2 = '@ViewBag.DivPanelIdle';
+                    document.getElementById(clickHandler).onclick = function ()
+                    {
+                        showInbox('@ViewBag.Equip', '@ViewBag.IsSECSGEM', '@ViewBag.LotNo');
+                    }
+                    @*document.getElementById(clickHandler2).onclick = function () {
+                        showInbox('@ViewBag.Equip', '@ViewBag.IsSECSGEM', '@ViewBag.LotNo');
+                    }*@
+
+                    clickHandler = '@ViewBag.DivAlarmWarning';
+                    clickHandler2 = '@ViewBag.DivPanelWarning';
+                    document.getElementById(clickHandler).onclick = function ()
+                    {
+                        showInbox('@ViewBag.Equip', '@ViewBag.IsSECSGEM', '@ViewBag.LotNo');
+                    }
+                    @*document.getElementById(clickHandler2).onclick = function () {
+                        showInbox('@ViewBag.Equip', '@ViewBag.IsSECSGEM', '@ViewBag.LotNo');
+                    }*@
+
+                </script>
+            }
+
+            IEnumerable<string> IEnumIdle = lstIdle as IEnumerable<string>;
+            foreach (var x in IEnumIdle.Reverse())
+            {
+                <script type="text/javascript">
+                            var temp = '@x';
+                            var newElement = document.getElementById(temp);
+                            var afterElement = document.getElementById('divDummy');
+                            insertAfter(newElement, afterElement);
+                </script>
+            }
+
+            IEnumerable<string> IEnumOnline = lstOnline as IEnumerable<string>;
+            foreach (var x in IEnumOnline.Reverse())
+            {
+                <script type="text/javascript">
+                            var temp = '@x';
+                            var newElement = document.getElementById(temp);
+                            var afterElement = document.getElementById('divDummy');
+                            insertAfter(newElement, afterElement);
+                </script>
+            }
+
+            IEnumerable<string> IEnumWarning = lstWarning as IEnumerable<string>;
+            foreach (var x in IEnumWarning.Reverse())
+            {
+                <script type="text/javascript">
+                            var temp = '@x';
+                            var newElement = document.getElementById(temp);
+                            var afterElement = document.getElementById('divDummy');
+                            insertAfter(newElement, afterElement);
+                </script>
+            }
+
+            IEnumerable<string> IEnumOffline = lstOffline as IEnumerable<string>;
+            foreach (var x in IEnumOffline.Reverse())
+            {
+                <script type="text/javascript">
+                            var temp = '@x';
+                            var newElement = document.getElementById(temp);
+                            var afterElement = document.getElementById('divDummy');
+                            insertAfter(newElement, afterElement);
+                </script>
+            }
+        }
+        catch
+        { }
+
+    </div>
+
+    <div class="row" id="divGroup">
+            @try
+            {
+                var obj = Common.GetEnrolledGroup();
+
+                if (obj != null)
+                {
+                    if (obj.Count > 0)
+                    {
+                        string text2 = "";
+                        if (obj.Count > 1)
+                        {
+                            text2 = "Machine Groups:";
+                        }
+                        else
+                        {
+                            text2 = "Machine Group:";
+                        }
+                        <div class="col-lg-3 col-md-6"><p style="font-weight:bold;">@text2</p></div><br /><br />
+                    }
+                }
+
+                List<string> lstChildOffline = new List<string>();
+                List<string> lstChildOnline = new List<string>();
+                List<string> lstChildIdle = new List<string>();
+                List<string> lstChildWarning = new List<string>();
+
+                foreach (var x in obj)
+                {
+                    var groupID = x.ID;
+                    var groupName = x.GroupName;
+                    var divGroupID = "divEquipmentGroup_" + groupName;
+
+                    <div id="@divGroupID" class="col-lg-3 col-md-6">
+                        <div class="panel info-box panel-white" style="cursor:pointer;">
+                            <div class="panel-body" style="padding-left:20px;padding-right:0px;padding-bottom:0px;padding-top:20px;">
+                                <div class="info-box-stats">
+                                    @*<p class="counter">@item.Equipment</p>*@
+                                    <p style="font-weight:bold;">@x.GroupName</p>
+                                </div>
+                            </div>
+                            <div class="panel-body" style="padding-top:0px;">
+                                @{
+                                    var lstEquip = Common.GetChildEquipment(groupID.ToString(), Session["Username"].ToString());
+                                    var tempSize = lstEquip.Count;
+                                    var tempCount = 1;
+
+                                    foreach(var y in lstEquip)
+                                    {
+
+                                        var divChildWarning = "divEquipment_" + y.Equipment + "_Warning";
+                                        var divChildOnline = "divEquipment_" + y.Equipment + "_Online";
+                                        var divChildOffline = "divEquipment_" + y.Equipment + "_Offline";
+                                        var divChildIdle = "divEquipment_" + y.Equipment + "_Idle";
+
+                                        var divChildPanelWarning = "divPanel_" + y.Equipment + "_Warning";
+                                        var divChildPanelOnline = "divPanel_" + y.Equipment + "_Online";
+                                        var divChildPanelOffline = "divPanel_" + y.Equipment + "_Offline";
+                                        var divChildPanelIdle = "divPanel_" + y.Equipment + "_Idle";
+
+                                        var divChildAlarmWarning = "divAlarm_" + y.Equipment + "_Warning";
+                                        var divChildAlarmOnline = "divAlarm_" + y.Equipment + "_Online";
+                                        var divChildAlarmOffline = "divAlarm_" + y.Equipment + "_Offline";
+                                        var divChildAlarmIdle = "divAlarm_" + y.Equipment + "_Idle";
+
+                                        var divChildPrintWarning = "divPrint_" + y.Equipment + "_Warning";
+                                        var divChildPrintOnline = "divPrint_" + y.Equipment + "_Online";
+                                        var divChildPrintOffline = "divPrint_" + y.Equipment + "_Offline";
+                                        var divChildPrintIdle = "divPrint_" + y.Equipment + "_Idle";
+
+                                        var btnChildPrintWarning = "btnPrint_" + y.Equipment + "_Warning";
+                                        var btnChildPrintOnline = "btnPrint_" + y.Equipment + "_Online";
+                                        var btnChildPrintOffline = "btnPrint_" + y.Equipment + "_Offline";
+                                        var btnChildPrintIdle = "btnPrint_" + y.Equipment + "_Idle";
+
+                                        var lblChildAlarmWarning = "lblAlarm_" + y.Equipment + "_Warning";
+                                        var lblChildAlarmOnline = "lblAlarm_" + y.Equipment + "_Online";
+                                        var lblChildAlarmOffline = "lblAlarm_" + y.Equipment + "_Offline";
+                                        var lblChildAlarmIdle = "lblAlarm_" + y.Equipment + "_Idle";
+
+                                        var lblChildProcessWarning = "lblProcess_" + y.Equipment + "_Warning";
+                                        var lblChildProcessOnline = "lblProcess_" + y.Equipment + "_Online";
+                                        var lblChildProcessOffline = "lblProcess_" + y.Equipment + "_Offline";
+                                        var lblChildProcessIdle = "lblProcess_" + y.Equipment + "_Idle";
+
+                                        var lblChildBrandedQtyWarning = "lblBranded_" + y.Equipment + "_Warning";
+                                        var lblChildBrandedQtyOnline = "lblBranded_" + y.Equipment + "_Online";
+                                        var lblChildBrandedQtyOffline = "lblBranded_" + y.Equipment + "_Offline";
+                                        var lblChildBrandedQtyIdle = "lblBranded_" + y.Equipment + "_Idle";
+
+                                        var lblChildUnbrandedQtyWarning = "lblUnbranded_" + y.Equipment + "_Warning";
+                                        var lblChildUnbrandedQtyOnline = "lblUnbranded_" + y.Equipment + "_Online";
+                                        var lblChildUnbrandedQtyOffline = "lblUnbranded_" + y.Equipment + "_Offline";
+                                        var lblChildUnbrandedQtyIdle = "lblUnbranded_" + y.Equipment + "_Idle";
+
+                                        var lblChildLeftCounterWarning = "lblLeftCounter_" + y.Equipment + "_Warning";
+                                        var lblChildLeftCounterOnline = "lblLeftCounter_" + y.Equipment + "_Online";
+                                        var lblChildLeftCounterOffline = "lblLeftCounter_" + y.Equipment + "_Offline";
+                                        var lblChildLeftCounterIdle = "lblLeftCounter_" + y.Equipment + "_Idle";
+
+                                        var lblChildLeftCounterPrintWarning = "lblLeftCounterPrint_" + y.Equipment + "_Warning";
+                                        var lblChildLeftCounterPrintOnline = "lblLeftCounterPrint_" + y.Equipment + "_Online";
+                                        var lblChildLeftCounterPrintOffline = "lblLeftCounterPrint_" + y.Equipment + "_Offline";
+                                        var lblChildLeftCounterPrintIdle = "lblLeftCounterPrint_" + y.Equipment + "_Idle";
+
+                                        var lblChildRightCounterPrintWarning = "lblRightCounterPrint_" + y.Equipment + "_Warning";
+                                        var lblChildRightCounterPrintOnline = "lblRightCounterPrint_" + y.Equipment + "_Online";
+                                        var lblChildRightCounterPrintOffline = "lblRightCounterPrint_" + y.Equipment + "_Offline";
+                                        var lblChildRightCounterPrintIdle = "lblRightCounterPrint_" + y.Equipment + "_Idle";
+
+                                        var lblChildRightCounterWarning = "lblRightCounter_" + y.Equipment + "_Warning";
+                                        var lblChildRightCounterOnline = "lblRightCounter_" + y.Equipment + "_Online";
+                                        var lblChildRightCounterOffline = "lblRightCounter_" + y.Equipment + "_Offline";
+                                        var lblChildRightCounterIdle = "lblRightCounter_" + y.Equipment + "_Idle";
+
+                                        var divChildProcessingWarning = "divProcessing_" + y.Equipment + "_Warning";
+                                        var divChildProcessingOnline = "divProcessing_" + y.Equipment + "_Online";
+                                        var divChildProcessingOffline = "divProcessing_" + y.Equipment + "_Offline";
+                                        var divChildProcessingIdle = "divProcessing_" + y.Equipment + "_Idle";
+
+                                        var divChildNotProcessingWarning = "divNotProcessing_" + y.Equipment + "_Warning";
+                                        var divChildNotProcessingOnline = "divNotProcessing_" + y.Equipment + "_Online";
+                                        var divChildNotProcessingOffline = "divNotProcessing_" + y.Equipment + "_Offline";
+                                        var divChildNotProcessingIdle = "divNotProcessing_" + y.Equipment + "_Idle";
+
+                                        var ChildProgressBarWarning = "ProgressBar_" + y.Equipment + "_Warning";
+                                        var ChildProgressBarOnline = "ProgressBar_" + y.Equipment + "_Online";
+                                        var ChildProgressBarOffline = "ProgressBar_" + y.Equipment + "_Offline";
+                                        var ChildProgressBarIdle = "ProgressBar_" + y.Equipment + "_Idle";
+
+                                        var ChildQtyDivWarning = "QtyDiv_" + y.Equipment + "_Warning";
+                                        var ChildQtyDivOnline = "QtyDiv_" + y.Equipment + "_Online";
+                                        var ChildQtyDivOffline = "QtyDiv_" + y.Equipment + "_Offline";
+                                        var ChildQtyDivIdle = "QtyDiv_" + y.Equipment + "_Idle";
+
+                                        var ChilddivUnitWarning = "UnitsDiv_" + y.Equipment + "_Warning";
+                                        var ChilddivUnitOnline = "UnitsDiv_" + y.Equipment + "_Online";
+                                        var ChilddivUnitOffline = "UnitsDiv_" + y.Equipment + "_Offline";
+                                        var ChilddivUnitIdle = "UnitsDiv_" + y.Equipment + "_Idle";
+
+                                        var ChildlblUnitWarning = "lblUnits_" + y.Equipment + "_Warning";
+                                        var ChildlblUnitOnline = "lblUnits_" + y.Equipment + "_Online";
+                                        var ChildlblUnitOffline = "lblUnits_" + y.Equipment + "_Offline";
+                                        var ChildlblUnitIdle = "lblUnits_" + y.Equipment + "_Idle";
+
+                                        var ChildlblLotNameWarning = "lblLotName_" + y.Equipment + "_Warning";
+                                        var ChildlblLotNameOnline = "lblLotName_" + y.Equipment + "_Online";
+                                        var ChildlblLotNameOffline = "lblLotName_" + y.Equipment + "_Offline";
+                                        var ChildlblLotNameIdle = "lblLotName_" + y.Equipment + "_Idle";
+
+                                        var btnSpanChildPrintAllowedWarning = "btnSpanPrintAllowed_" + y.Equipment + "_Warning";
+                                        var btnSpanChildPrintAllowedOnline = "btnSpanPrintAllowed_" + y.Equipment + "_Online";
+                                        var btnSpanChildPrintAllowedOffline = "btnSpanPrintAllowed_" + y.Equipment + "_Offline";
+                                        var btnSpanChildPrintAllowedIdle = "btnSpanPrintAllowed_" + y.Equipment + "_Idle";
+
+
+                                        var Childstatus = Common.GetEquipmentStatus(y.Equipment);
+                                        var Childcount = Common.GetAlarmCount(y.Equipment);
+                                        var ChildequipType = y.Type;
+                                        var ChildisSECSGEM = y.isSECSGEM;
+
+                                        var ChildLotNo = "";
+
+                                        var PrintChildStyle = "";
+
+                                        var ReelChild = Common.GetReel(y.Equipment);
+                                        var strChildCurrentReel = "0";
+                                        var strChildTotalReel = "0";
+                                        var strChildAllowedReel = "0";
+                                        var allowChildPrint = false;
+                                        if (ReelChild != null)
+                                        {
+                                            strChildCurrentReel = ReelChild.CurrentReel.ToString();
+                                            strChildTotalReel = ReelChild.TotalReel.ToString();
+                                            strChildAllowedReel = ReelChild.AllowedReel.ToString();
+                                        }
+
+                                        if (strChildAllowedReel.ToString() == "0")
+                                        {
+                                            allowChildPrint = false;
+                                        }
+                                        else
+                                        {
+                                            allowChildPrint = true;
+                                        }
+
+                                        var ChildEquipCount = Convert.ToInt32(Session["GroupCount"].ToString());
+
+                                        if (ChildisSECSGEM == false)
+                                        {
+                                            Childstatus = Common.GetEquipmentStatusTCP(y.Equipment, y.Port);
+                                            Childcount = Common.GetNewAlarmCountTCP(y.Equipment);
+                                        }
+
+                                        var ChildalarmCount = "";
+
+                                        if (Childcount > 999)
+                                        {
+                                            ChildalarmCount = Childcount.ToString() + "+";
+                                        }
+                                        else
+                                        {
+                                            ChildalarmCount = Childcount.ToString();
+                                        }
+
+                                        var ChildTrackInCount = Common.GetTrackInQty(y.Equipment);
+                                        var ChildstrTrackInCount = ChildTrackInCount.ToString();
+                                        var ChildProcessedCount = 0;
+                                        var ChildUnitsCount = 0;
+
+                                        if (ChildisSECSGEM == true)
+                                        {
+                                            ChildProcessedCount = Common.GetSECSGEMProcessedQty(y.Equipment);
+                                            ChildUnitsCount = Common.GetSECSGEMProcessedQtyInUnits(y.Equipment);
+                                        }
+                                        else
+                                        {
+                                            if (y.Type == "LASER MARK TEST")
+                                            {
+                                                ChildProcessedCount = Common.GetProcessedQty(y.Equipment);
+                                            }
+                                        }
+
+                                        var ChildstrProcessedCount = ChildProcessedCount.ToString();
+
+                                        var ChildUnitStyle = "";
+
+                                        if (y.Type == "DEK PRINTER" || y.Type == "PANASONIC COMPONENT ATTACH" || y.Type == "HELLER OVEN")
+                                        {
+                                            ChildUnitStyle = "display:block;";
+                                        }
+                                        else
+                                        {
+                                            ChildUnitStyle = "display:none;";
+                                        }
+
+                                        var ChildProcessingStyle = "";
+                                        var ChildNotProcessingStyle = "";
+                                        var ChildLotStyle = "";
+                                        var ChildProcessingStyleBranded = "";
+
+                                        var ChildPercentStyle = "";
+
+                                        var ChildProcessingText = "";
+
+                                        var ChildBrandedQty = Common.GetBrandedQty(y.Equipment);
+                                        var ChildUnbrandedQty = Common.GetUnbrandedQty(y.Equipment);
+
+                                        if (ChildTrackInCount == 0)
+                                        {
+                                            ChildProcessingStyle = "display:none;";
+                                            PrintChildStyle = "display:none;";
+                                            ChildProcessingStyleBranded = "display:none;";
+                                            ChildNotProcessingStyle = "display:block;";
+                                            ChildPercentStyle = "width:100%;";
+                                        }
+                                        else
+                                        {
+                                            ChildProcessingStyle = "display:block;";
+                                            ChildNotProcessingStyle = "display:none;";
+
+                                            ChildLotNo = Common.GetLotInProcess(y.Equipment);
+
+                                            if (y.Type == "LASER MARK TEST")
+                                            {
+                                                ChildProcessingStyleBranded = "display:block;";
+                                                PrintChildStyle = "display:block;";
+                                            }
+                                            else
+                                            {
+                                                ChildProcessingStyleBranded = "display:none;";
+                                                PrintChildStyle = "display:none;";
+                                            }
+
+                                            double Childpercentage = (Convert.ToDouble(ChildProcessedCount) / Convert.ToDouble(ChildTrackInCount)) * 100;
+                                            if (Childpercentage >= 100)
+                                            {
+                                                ChildProcessingText = "Done Processing:";
+                                            }
+                                            else
+                                            {
+                                                ChildProcessingText = "Processing:";
+                                            }
+                                            ChildPercentStyle = "width:" + Childpercentage.ToString() + "%" + ";";
+                                        }
+
+                                        if (ChildLotNo != "" && ChildLotNo != null)
+                                        {
+                                            ChildLotStyle = "display:block;font-weight:bold;";
+                                        }
+                                        else
+                                        {
+                                            ChildLotNo = "N/A";
+                                            ChildLotStyle = "display:block;font-weight:bold;";
+                                        }
+
+                                        <div>
+                                            <div id="@divChildOffline">
+                                                <div id="@divChildPanelOffline">
+                                                    <div class="info-box-stats">
+                                                        <p style="font-weight:lighter;font-size:20px;">@y.Equipment</p>
+                                                        <span class="info-box-title" style="color:#F25656;font-weight:bold;">Offline</span>
+                                                    </div>
+                                                    <div class="info-box-icon">
+                                                        <div class="notification-icon">
+                                                            <span style="cursor:pointer;" class="badge badgeBackcolorDiv" id="@divChildAlarmOffline"><label style="cursor:pointer;" class="AlarmFont" id="@lblChildAlarmOffline">@ChildalarmCount</label></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-box-progress">
+                                                        <div><label id="@ChildlblLotNameOffline" style="@ChildLotStyle">@ChildLotNo</label></div>
+                                                        <div><label>Cannot communicate with machine</label></div>
+                                                        <div class="progress progress-xs progress-squared bs-n">
+                                                            <div id="@ChildProgressBarOffline" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="@divChildWarning">
+                                                <div id="@divChildPanelWarning">
+                                                    <div class="info-box-stats">
+                                                        <p style="font-weight:lighter;font-size:20px;">@y.Equipment</p>
+                                                        <span class="info-box-title" style="color:#D1B52B;font-weight:bold;">Warning</span>
+                                                    </div>
+                                                    <div class="info-box-icon">
+                                                        <div class="notification-icon">
+                                                            <span style="cursor:pointer;" class="badge badgeBackcolorDiv" id="@divChildAlarmWarning"><label style="cursor:pointer;" class="AlarmFont" id="@lblChildAlarmWarning">@ChildalarmCount</label></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-box-progress">
+                                                        <div><label id="@ChildlblLotNameWarning" style="@ChildLotStyle">@ChildLotNo</label></div>
+                                                        <div><label>Machine has warnings</label></div>
+                                                        <div class="progress progress-xs progress-squared bs-n">
+                                                            <div id="@ChildProgressBarWarning" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="@divChildOnline">
+                                                <div id="@divChildPanelOnline">
+                                                    <div class="info-box-stats">
+                                                        <p style="font-weight:lighter;font-size:20px;">@y.Equipment</p>
+                                                        <span class="info-box-title" style="color:#1C9E88;font-weight:bold;">Online</span>
+                                                    </div>
+                                                    <div class="info-box-icon">
+                                                        <div class="notification-icon">
+                                                            <span style="cursor:pointer;" class="badge badgeBackcolorDiv" id="@divChildAlarmOnline"><label style="cursor:pointer;" class="AlarmFont" id="@lblChildAlarmOnline">@ChildalarmCount</label></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-box-progress">
+                                                        <div><label id="@ChildlblLotNameOnline" style="@ChildLotStyle">@ChildLotNo</label></div>
+                                                        <div id="@divChildPrintOnline" style="@PrintChildStyle">
+                                                            <label>Label Print:&nbsp;</label><label id="@lblChildLeftCounterPrintOnline">@strChildCurrentReel</label>&nbsp;/&nbsp;<label id="@lblChildRightCounterPrintOnline">@strChildTotalReel</label>
+                                                            @if (allowChildPrint == true)
+                                                            {
+
+                                                                <button id="@btnChildPrintOnline" style="display:inline;" type="button" class="btn-xs btn-info"><span data-toggle="tooltip" title="Print Label" class="glyphicon glyphicon-print"></span>&nbsp;<span id="@btnSpanChildPrintAllowedOnline">@strChildAllowedReel</span></button>
+                                                            }
+                                                            else
+                                                            {
+                                                                <button id="@btnChildPrintOnline" style="display:none;" type="button" class="btn-xs btn-info"><span data-toggle="tooltip" title="Print Label" class="glyphicon glyphicon-print"></span>&nbsp;<span id="@btnSpanChildPrintAllowedOnline">@strChildAllowedReel</span></button>
+                                                            }
+                                                        </div>
+                                                        <div id="@ChildQtyDivOnline" style="@ChildProcessingStyleBranded">
+                                                            Branded Quantity:&nbsp;<label id="@lblChildBrandedQtyOnline">@ChildBrandedQty</label>
+                                                            <br />
+                                                            Unbranded Quantity:&nbsp;<label id="@lblChildUnbrandedQtyOnline">@ChildUnbrandedQty</label>
+                                                        </div>
+                                                        <div id="@ChilddivUnitOnline" style="@ChildUnitStyle">
+                                                            <label>Units:&nbsp;</label><label id="@ChildlblUnitOnline">@ChildUnitsCount</label>
+                                                        </div>
+                                                        <div id="@divChildProcessingOnline" style="@ChildProcessingStyle">
+                                                            <label id="@lblChildProcessOnline">@ChildProcessingText&nbsp;</label><label id="@lblChildLeftCounterOnline">@ChildstrProcessedCount</label>&nbsp;/&nbsp;<label id="@lblChildRightCounterOnline">@ChildstrTrackInCount</label>
+                                                        </div>
+                                                        <div id="@divChildNotProcessingOnline" style="@ChildNotProcessingStyle">
+                                                            <label>Not Processing</label>
+                                                        </div>
+                                                        <div class="progress progress-xs progress-squared bs-n">
+                                                            <div id="@ChildProgressBarOnline" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="@ChildPercentStyle">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="@divChildIdle">
+                                                <div id="@divChildPanelIdle">
+                                                    <div class="info-box-stats">
+                                                        <p style="font-weight:lighter;font-size:20px;">@y.Equipment</p>
+                                                        <span class="info-box-title" style="color:#0F95AD;font-weight:bold;">Idle</span>
+                                                    </div>
+                                                    <div class="info-box-icon">
+                                                        <div class="notification-icon">
+                                                            <span style="cursor:pointer;" class="badge badgeBackcolorDiv" id="@divChildAlarmIdle"><label style="cursor:pointer;" class="AlarmFont" id="@lblChildAlarmIdle">@ChildalarmCount</label></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-box-progress">
+                                                        <div><label id="@ChildlblLotNameIdle" style="@ChildLotStyle">@ChildLotNo</label></div>
+                                                        <div><label>Awaiting Process</label></div>
+                                                        <div class="progress progress-xs progress-squared bs-n">
+                                                            <div id="@ChildProgressBarIdle" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            @if (tempCount != tempSize)
+                                            {
+                                                <br/>
+                                                tempCount++;
+                                            }
+                                            else
+                                            {
+                                                tempCount++;
+                                            }
+                                        </div>
+
+                                        ViewBag.DivChildOffline = divChildOffline;
+                                        ViewBag.DivChildOnline = divChildOnline;
+                                        ViewBag.DivChildIdle = divChildIdle;
+                                        ViewBag.DivChildWarning = divChildWarning;
+
+                                        ViewBag.DivChildPanelOffline = divChildPanelOffline;
+                                        ViewBag.DivChildPanelOnline = divChildPanelOnline;
+                                        ViewBag.DivChildPanelIdle = divChildPanelIdle;
+                                        ViewBag.DivChildPanelWarning = divChildPanelWarning;
+
+                                        ViewBag.DivChildAlarmOffline = divChildAlarmOffline;
+                                        ViewBag.DivChildAlarmOnline = divChildAlarmOnline;
+                                        ViewBag.DivChildAlarmIdle = divChildAlarmIdle;
+                                        ViewBag.DivChildAlarmWarning = divChildAlarmWarning;
+
+                                        ViewBag.ChildEquip = y.Equipment;
+                                        ViewBag.ChildIsSECSGEM = ChildisSECSGEM;
+                                        ViewBag.ChildLotNo = ChildLotNo;
+
+                                        lstChildOffline.Add(divChildOffline);
+                                        lstChildOnline.Add(divChildOnline);
+                                        lstChildIdle.Add(divChildIdle);
+                                        lstChildWarning.Add(divChildWarning);
+
+                                        <script type="text/javascript">
+
+
+                                            @if (Childstatus.ToUpper() == "OFFLINE")
+                                            {
+                                                @:show('@ViewBag.DivChildOffline');
+                                                @:hide('@ViewBag.DivChildOnline');
+                                                @:hide('@ViewBag.DivChildIdle');
+                                                @:hide('@ViewBag.DivChildWarning');
+                                            }
+                                            else if (Childstatus.ToUpper() == "ONLINE")
+                                            {
+                                                @:show('@ViewBag.DivChildOnline');
+                                                @:hide('@ViewBag.DivChildOffline');
+                                                @:hide('@ViewBag.DivChildIdle');
+                                                @:hide('@ViewBag.DivChildWarning');
+                                            }
+                                            else if (Childstatus.ToUpper() == "IDLE")
+                                            {
+                                                @:show('@ViewBag.DivChildIdle');
+                                                @:hide('@ViewBag.DivChildOnline');
+                                                @:hide('@ViewBag.DivChildOffline');
+                                                @:hide('@ViewBag.DivChildWarning');
+                                            }
+                                            else if (Childstatus.ToUpper() == "WARNING")
+                                            {
+                                                @:hide('@ViewBag.DivChildIdle');
+                                                @:hide('@ViewBag.DivChildOnline');
+                                                @:hide('@ViewBag.DivChildOffline');
+                                                @:show('@ViewBag.DivChildWarning');
+                                            }
+
+                                            @if (Childcount == 0)
+                                            {
+                                                @:hide('@ViewBag.DivChildAlarmOffline');
+                                                @:hide('@ViewBag.DivChildAlarmOnline');
+                                                @:hide('@ViewBag.DivChildAlarmIdle');
+                                                @:hide('@ViewBag.DivChildAlarmWarning');
+                                            }
+                                            else
+                                            {
+                                                @:show('@ViewBag.DivChildAlarmOffline');
+                                                @:show('@ViewBag.DivChildAlarmOnline');
+                                                @:show('@ViewBag.DivChildAlarmIdle');
+                                                @:show('@ViewBag.DivChildAlarmWarning');
+                                            }
+
+                                            var ChildclickHandler = '@ViewBag.DivChildAlarmOffline';
+                                            var ChildclickHandler2 = '@ViewBag.DivChildPanelOffline';
+
+                                            document.getElementById(ChildclickHandler).onclick = function () {
+                                                showInbox('@ViewBag.ChildEquip', '@ViewBag.ChildIsSECSGEM', '@ViewBag.ChildLotNo');
+                                            }
+                                            @*document.getElementById(ChildclickHandler2).onclick = function () {
+                                                showInbox('@ViewBag.ChildEquip', '@ViewBag.ChildIsSECSGEM', '@ViewBag.ChildLotNo');
+                                            }*@
+
+                                            ChildclickHandler = '@ViewBag.DivChildAlarmOnline';
+                                            ChildclickHandler2 = '@ViewBag.DivChildPanelOnline';
+                                            document.getElementById(ChildclickHandler).onclick = function ()
+                                            {
+                                                showInbox('@ViewBag.ChildEquip', '@ViewBag.ChildIsSECSGEM', '@ViewBag.ChildLotNo');
+                                            }
+                                            @*document.getElementById(ChildclickHandler2).onclick = function () {
+                                                showInbox('@ViewBag.ChildEquip', '@ViewBag.ChildIsSECSGEM', '@ViewBag.ChildLotNo');
+                                            }*@
+
+                                            ChildclickHandler = '@ViewBag.DivChildAlarmIdle';
+                                            ChildclickHandler2 = '@ViewBag.DivChildPanelIdle';
+                                            document.getElementById(ChildclickHandler).onclick = function ()
+                                            {
+                                                showInbox('@ViewBag.ChildEquip', '@ViewBag.ChildIsSECSGEM', '@ViewBag.ChildLotNo');
+                                            }
+                                            @*document.getElementById(ChildclickHandler2).onclick = function () {
+                                                showInbox('@ViewBag.ChildEquip', '@ViewBag.ChildIsSECSGEM', '@ViewBag.ChildLotNo');
+                                            }*@
+
+                                            ChildclickHandler = '@ViewBag.DivChildAlarmWarning';
+                                            ChildclickHandler2 = '@ViewBag.DivChildPanelWarning';
+                                            document.getElementById(ChildclickHandler).onclick = function ()
+                                            {
+                                                showInbox('@ViewBag.ChildEquip', '@ViewBag.ChildIsSECSGEM', '@ViewBag.ChildLotNo');
+                                            }
+                                            @*document.getElementById(ChildclickHandler2).onclick = function () {
+                                                showInbox('@ViewBag.ChildEquip', '@ViewBag.ChildIsSECSGEM', '@ViewBag.ChildLotNo');
+                                            }*@
+
+                                        </script>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            catch { }
+    </div>
+
+
+        @*<div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-white">
+                        <div class="panel-body">
+                            <div class="search p bg-light m-b-sm">
+                                <form action="#" method="GET" data-default="150">
+                                    <div class="input-group">
+                                        <input type="text" name="search" class="form-control input-search" placeholder="Search...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-success" type="button"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div><!-- Input Group -->
+                                </form><!-- Search Form -->
+                            </div>
+                            <div role="tabpanel">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab" aria-expanded="false">All<span class="badge badge-success pull-right m-l-xs">18</span></a></li>
+                                    <li role="presentation"><a href="#users" aria-controls="users" role="tab" data-toggle="tab" aria-expanded="true">Users<span class="badge badge-danger pull-right m-l-xs">7</span></a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in p-v-lg" id="all">
+                                        <div class="search-item">
+                                            <h3 class="no-m"><a href="javascript:void(0);">Lorem ipsum dolor sit amet</a></h3>
+                                            <a href="javascript:void(0);" class="search-link">www.google.com</a>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                        </div>
+                                        <div class="search-item">
+                                            <h3 class="no-m"><a href="javascript:void(0);">Consectetur adipiscing elit</a></h3>
+                                            <a href="javascript:void(0);" class="search-link">www.google.com</a>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                        </div>
+                                        <div class="search-item">
+                                            <h3 class="no-m"><a href="javascript:void(0);">Integer molestie lorem at massa</a></h3>
+                                            <a href="javascript:void(0);" class="search-link">www.google.com</a>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                        </div>
+                                        <div class="search-item">
+                                            <h3 class="no-m"><a href="javascript:void(0);">Facilisis in pretium nisl aliquet</a></h3>
+                                            <a href="javascript:void(0);" class="search-link">www.google.com</a>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                        </div>
+                                        <div class="search-item">
+                                            <h3 class="no-m"><a href="javascript:void(0);">Nulla volutpat aliquam velit</a></h3>
+                                            <a href="javascript:void(0);" class="search-link">www.google.com</a>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                        </div>
+                                        <div class="search-item">
+                                            <h3 class="no-m"><a href="javascript:void(0);">Faucibus porta lacus fringilla vel</a></h3>
+                                            <a href="javascript:void(0);" class="search-link">www.google.com</a>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                        </div>
+                                        <div class="search-item">
+                                            <h3 class="no-m"><a href="javascript:void(0);">Aenean sit amet erat nunc</a></h3>
+                                            <a href="javascript:void(0);" class="search-link">www.google.com</a>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                        </div>
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                                <li><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li class="active"><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li><a href="#">6</a></li>
+                                                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade p-v-lg" id="users">
+                                        <div class="search-item clearfix">
+                                            <div class="pull-left m-r-md">
+                                                <img src="assets/images/avatar1.png" class="img-circle" width="80" alt="">
+                                            </div>
+                                            <h3 class="no-m m-t-xs"><a href="javascript:void(0);">David Smith</a></h3>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                                        </div>
+                                        <div class="search-item clearfix">
+                                            <div class="pull-left m-r-md">
+                                                <img src="assets/images/avatar2.png" class="img-circle" width="80" alt="">
+                                            </div>
+                                            <h3 class="no-m m-t-xs"><a href="javascript:void(0);">Sandra Smith</a></h3>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                                        </div>
+                                        <div class="search-item clearfix">
+                                            <div class="pull-left m-r-md">
+                                                <img src="assets/images/avatar3.png" class="img-circle" width="80" alt="">
+                                            </div>
+                                            <h3 class="no-m m-t-xs"><a href="javascript:void(0);">Christoper Palmer</a></h3>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                                        </div>
+                                        <div class="search-item clearfix">
+                                            <div class="pull-left m-r-md">
+                                                <img src="assets/images/avatar4.png" class="img-circle" width="80" alt="">
+                                            </div>
+                                            <h3 class="no-m m-t-xs"><a href="javascript:void(0);">Emily Lee</a></h3>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                                        </div>
+                                        <div class="search-item clearfix">
+                                            <div class="pull-left m-r-md">
+                                                <img src="assets/images/avatar5.png" class="img-circle" width="80" alt="">
+                                            </div>
+                                            <h3 class="no-m m-t-xs"><a href="javascript:void(0);">Nick Doe</a></h3>
+                                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                                        </div>
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                                <li><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li class="active"><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Approvers for each category</h3>
+                        </div>
+                        <div class="panel-body">
+                            <code>.panel-info</code>
+                        </div>
+                    </div>
+                </div>
+
+            </div>*@
+
+}
+
+@section JavaScript
+{
+    <script src="~/Scripts/pages/index.js"></script>
+}

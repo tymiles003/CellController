@@ -1,0 +1,126 @@
+﻿
+@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+@section content {
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Create New Gate Pass Request</h3>
+                </div>
+                <div class="panel-body">
+                    <br />
+
+                    <div class="col-md-12">
+                     
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#tabHeader" role="tab" data-toggle="tab">Header</a></li>
+                        </ul>
+                       
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="tabHeader">
+                                <div class="form-group col-md-6">
+                                    <label for="txtGatePassID">Gate Pass ID:</label>
+                                    <input type="text" class="form-control" id="txtGatePassID" placeholder="System Generated" readonly="readonly">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="txtImpexRefNbr">IMPEX Ref. Number:</label>
+                                    <input type="text" class="form-control" id="txtImpexRefNbr" placeholder="IMPEX Ref. Number">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="cmbTransType">Transaction Type:</label>
+                                    <select id="cmbTransType" class="form-control m-b-sm">
+                                        <option value="IN">IN</option>
+                                        <option value="OUT">OUT</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="txtReturnDate">Return Date:</label>
+                                    <div class="InputDate" id="txtReturnDate"></div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="txtPurpose">Purpose:</label>
+                                    <textarea class="form-control" placeholder="Purpose" rows="4=6" id="txtPurpose"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <br />
+                   
+                        <br />
+                    </div>
+
+                    <div class="col-md-12">
+                       
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#tabItems" role="tab" data-toggle="tab">Items</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="tabItems">
+
+
+
+                                <div class="form-group col-md-12">
+                                    <div class="row">
+                                        <button id="cmdAddItem" class="btn btn-warning">Add Item</button>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="jqxgrid jqxgrid-filterable jqxgrid-sortable jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis jqxgrid-pageable jqxgrid-virtualmode jqxgrid-pagesizeoptions"
+                                             id="gridDetails"
+                                             grid-width="100"
+                                             data-url="/Transactions/GetTransDetails"
+                                             grid-selection-mode="singlerow"
+                                             grid-pagesizeoptions="5,10,20,50,100"
+                                             grid-child="ContactPersonGrid"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <br />
+
+                        <br />
+                    </div>
+                    <div class="col-md-12" style="text-align: right;">
+                        <hr />
+                        <button id="cmdSaveAsDraft" class="btn btn-info">Save As Draft</button>
+                        <button id="cmdSaveAndSubmit" class="btn btn-success">Save And Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">My Gate Pass Transactions</h3>
+                </div>
+                <div class="panel-body">
+                    <br />
+                    <div class="jqxgrid jqxgrid-filterable jqxgrid-sortable jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis"
+                         id="gridMyTransactions"
+                         data-url="/GatePass/MyGatePassTransactions"
+                         data-action-buttons="add"
+                         grid-selection-mode="singlecell"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+@section JavaScript {
+    
+<script src="~/Scripts/pages/mytransaction/mytransaction.js"></script>
+}

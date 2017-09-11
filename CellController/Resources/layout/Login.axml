@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/allegro_bg"
+    android:id="@+id/relativeLayout1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="Welcome to AMPI Cell Controller"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:gravity="center"
+            android:textSize="60sp"
+            android:layout_marginTop="100.0dp"
+            android:textColor="#ffffff" />
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="356.0dp"
+            android:layout_height="45dp"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:hint="Username"
+            android:background="@drawable/underline"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:text="rherejias"
+            android:layout_marginTop="100.0dp" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="356.0dp"
+            android:layout_height="45dp"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:hint="Password"
+            android:background="@drawable/underline"
+            android:inputType="textPassword"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:text="welcome1" />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="356.0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ghostbutton"
+            android:text="Login"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+            <TextView
+                android:text="Invalid username or password."
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/loginfail"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loading"
+        android:layout_marginTop="300.0dp"
+        android:visibility="gone" />
+</RelativeLayout>

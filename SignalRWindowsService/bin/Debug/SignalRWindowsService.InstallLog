@@ -1,0 +1,154 @@
+﻿Installing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Installing service CCSignalRService...
+Service CCSignalRService has been successfully installed.
+Creating EventLog source CCSignalRService in log Application...
+Committing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Service CCSignalRService is being removed from the system...
+Service CCSignalRService was successfully removed from the system.
+Attempt to stop service CCSignalRService.
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Warning: The source CCSignalRService is not registered on the local machine.
+Service CCSignalRService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Warning: The source CCSignalRService is not registered on the local machine.
+Service CCSignalRService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Installing service CCSignalRService...
+Service CCSignalRService has been successfully installed.
+Creating EventLog source CCSignalRService in log Application...
+Committing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Service CCSignalRService is being removed from the system...
+Service CCSignalRService was successfully removed from the system.
+Attempt to stop service CCSignalRService.
+Installing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Installing service CCSignalRService...
+Service CCSignalRService has been successfully installed.
+Creating EventLog source CCSignalRService in log Application...
+Committing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Service CCSignalRService is being removed from the system...
+Service CCSignalRService was successfully removed from the system.
+Attempt to stop service CCSignalRService.
+Installing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Installing service CCSignalRService...
+Service CCSignalRService has been successfully installed.
+Creating EventLog source CCSignalRService in log Application...
+Committing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Service CCSignalRService is being removed from the system...
+Service CCSignalRService was successfully removed from the system.
+Attempt to stop service CCSignalRService.
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Warning: The source CCSignalRService is not registered on the local machine.
+Service CCSignalRService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Installing service CCSignalRService...
+Service CCSignalRService has been successfully installed.
+Creating EventLog source CCSignalRService in log Application...
+Committing assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Service CCSignalRService is being removed from the system...
+Service CCSignalRService was successfully removed from the system.
+Attempt to stop service CCSignalRService.
+Uninstalling assembly 'C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.InstallLog
+   assemblypath = C:\Users\wmorata\Desktop\Projects\Stable Backups\test\CC.SignalR\SignalRWindowsService\bin\Debug\SignalRWindowsService.exe
+Removing EventLog source CCSignalRService.
+Warning: The source CCSignalRService is not registered on the local machine.
+Service CCSignalRService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.

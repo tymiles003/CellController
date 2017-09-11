@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+
+@model List<CellController.Web.ViewModels.EnrolledEquipment>
+
+@section content
+{
+    <link href="~/Content/CustomPanel.css" rel="stylesheet" />
+    <link href="~/Content/TrackOut.css" rel="stylesheet" />
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Details</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div class="col-md-12">
+                            <div class="form-group col-md-12">
+                                <label for="txtOperator">Operator ID:</label>
+                                <div class="input-group" id="divOper">
+                                    <input type="text" class="form-control" id="txtOperator" placeholder="Operator ID">
+                                    <span class="input-group-btn" title="Focus" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnFocusOperatorID"><span class="glyphicon glyphicon-eye-open"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtLotNumber">Lot Number:</label>
+                                <div class="input-group" id="divLot">
+                                    <input type="text" class="form-control" id="txtLotNumber" style="text-transform:uppercase;" placeholder="Lot Number">
+                                    <span class="input-group-btn" title="Focus" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnFocusLotNumber"><span class="glyphicon glyphicon-eye-open"></span></button>
+                                    </span>
+                                    <span class="input-group-btn" title="Validate Lot" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnCheckLot"><span class="glyphicon glyphicon-info-sign"></span></button>
+                                    </span>
+                                    <span id="spanWIPData" class="input-group-btn" title="WIP Data" data-toggle="tooltip" style="display:none;">
+                                        <button class="btn btn-default" type="button" id="btnWIPData"><span class="fa fa-balance-scale"></span></button>
+                                    </span>
+                                    <span id="spanEProc" class="input-group-btn" title="EProcedure" data-toggle="tooltip" style="display:none;">
+                                        <button class="btn btn-default" type="button" id="btnEProcedure"><span class="glyphicon glyphicon-list-alt"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="ddEquipment">Machine:</label>
+                                <select id="ddEquipment" class="form-control">
+                                    <option selected disabled>Select Machine</option>
+                                    @try
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <option value="@item.ID">@item.Equipment</option>
+                                        }
+                                    }
+                                    catch { }
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtMaxInProcessQuantity">Max In Process Quantity:</label>
+                                <input type="text" class="form-control" id="txtMaxInProcessQuantity" placeholder="Max In Process Quantity">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtTrackOutQuantity">Track Out Quantity:</label>
+                                <input type="text" class="form-control" id="txtTrackOutQuantity" placeholder="Track Out Quantity">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtScrapQuantity">Scrap Quantity:</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="txtScrapQuantity" placeholder="Scrap Quantity">
+                                    <span class="input-group-btn" title="Add Scrap" data-toggle="tooltip">
+                                        <button id="btnAddScrap" class="btn btn-default" type="button" onclick="ShowScrap();" disabled="disabled">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </span>
+                                    <span class="input-group-btn" title="Clear Scrap" data-toggle="tooltip">
+                                        <button id="btnClearScrap" class="btn btn-default" type="button" onclick="notification_modal_clear_scrap();" disabled="disabled">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div style="display:none;" class="form-group col-md-12">
+                                <input type="checkbox" id="chkRemainInEquipment" value="RemainInEquipment"> Remain In Equipment
+                            </div>
+                            <div style="display:none;" class="form-group col-md-12">
+                                <input type="checkbox" id="chkRemainInEquipmentIfPossible" value="RemainInEquipmentIfPossible"> Remain In Equipment If Possible
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtComment">Comment:</label>
+                                <textarea class="form-control" rows="4" id="txtComment" placeholder="Comment"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12" style="text-align:center;">
+                            <button id="btnTrackOut" class="btn btn-info">Track Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" id="divList" style="display:none;">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Loss Reason List</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div class="col-md-12">
+                            <div class="form-group col-md-12" id="divStack">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+}
+
+
+@section JavaScript
+{
+    <script src="~/Scripts/pages/trackout.js"></script>
+}

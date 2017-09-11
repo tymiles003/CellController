@@ -1,0 +1,165 @@
+﻿
+@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+
+@model List<CellController.Web.ViewModels.EnrolledEquipment>
+
+@section content
+{
+    <link href="~/Content/CustomPanel.css" rel="stylesheet" />
+    <link href="~/Content/EProcedure.css" rel="stylesheet" />
+    
+    <div class="row">
+    <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Details</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div class="col-md-12">
+                            <div class="form-group col-md-12">
+                                <label for="txtOperator">Operator ID:</label>
+                                <div class="input-group" id="divOper">
+                                    <input type="text" class="form-control" id="txtOperator" placeholder="Operator ID">
+                                    <span class="input-group-btn" title="Focus" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnFocusOperatorID"><span class="glyphicon glyphicon-eye-open"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtLotNumber">Lot Number:</label>
+                                <div class="input-group" id="divLot">
+                                    <input type="text" class="form-control" id="txtLotNumber" style="text-transform:uppercase;" placeholder="Lot Number">
+                                    <span class="input-group-btn" title="Focus" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnFocusLotNumber"><span class="glyphicon glyphicon-eye-open"></span></button>
+                                    </span>
+                                    <span class="input-group-btn" title="Validate Lot" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnCheckLot"><span class="glyphicon glyphicon-info-sign"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="ddEquipment">Machine:</label>
+                                <select id="ddEquipment" class="form-control">
+                                    <option selected disabled>Select Machine</option>
+                                    @try
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <option value="@item.ID">@item.Equipment</option>
+                                        }
+                                    }
+                                    catch { }
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="ddMode">Mode:</label>
+                                <select id="ddMode" class="form-control">
+                                    <option selected disabled>Select Mode</option>
+                                    <option value="Attribute Monitoring">Attribute Monitoring</option>
+                                    <option value="Inspection Result" style="display:none;">Inspection Result</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtMaxInProcessQuantity">Max In Process Quantity:</label>
+                                <input type="text" class="form-control" id="txtMaxInProcessQuantity" placeholder="Max In Process Quantity" disabled="disabled">
+                            </div>
+                            <div id="divFailedMonitoring" class="form-group inline col-md-12" style="display:none;">
+                                <label>Failed Monitoring:</label>
+                                <label>&nbsp;</label>
+                                <button id="btnAddScrapMonitoring" class="btn btn-default" title="Add Scrap" data-toggle="tooltip" type="button" onclick="ShowScrap();" disabled="disabled">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                                <button id="btnClearScrapMonitoring" class="btn btn-default" title="Clear Scrap" data-toggle="tooltip" type="button" onclick="notification_modal_clear_scrap();" disabled="disabled">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                                <div id="divAttrMon" class="form-group" style="display:none;">
+                                    <br />
+                                    <label for="ddAttrMon">Attribute Monitor:</label>
+                                    <select id="ddAttrMon" class="form-control">
+                                        <option value="1">Passed</option>
+                                        <option value="0">Failed</option>
+                                        <option value="-">N/A</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12" id="divInspectionResult" style="display:none;">
+                                <div class="form-group">
+                                    <label for="txtUnitInspected">Units Inspected:</label>
+                                    <input type="text" class="form-control" id="txtUnitInspected" placeholder="Units Inspected">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtUnitRejected">Units Rejected:</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="txtUnitRejected" placeholder="Units Rejected" disabled="disabled">
+                                        <span class="input-group-btn" title="Add Scrap" data-toggle="tooltip">
+                                            <button id="btnAddScrap" class="btn btn-default" type="button" onclick="ShowScrap();" disabled="disabled">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </span>
+                                        <span class="input-group-btn" title="Clear Scrap" data-toggle="tooltip">
+                                            <button id="btnClearScrap" class="btn btn-default" type="button" onclick="notification_modal_clear_scrap();" disabled="disabled">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ddContainment">Containment Done:</label>
+                                    <select id="ddContainment" class="form-control">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ddRequalPass">Requal Pass:</label>
+                                    <select id="ddRequalPass" class="form-control">
+                                        <option value="1">Passed</option>
+                                        <option value="0">Failed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="text-align:center;">
+                            <button id="btnSubmit" class="btn btn-info">Submit</button>
+                            <button id="btnBack" class="btn btn-info" style="display:none;">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" id="divList" style="display:none;">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Loss Reason List</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div>
+                            <div class="form-group col-md-12" id="divStack">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+}
+
+
+@section JavaScript
+{
+    <script src="~/Scripts/pages/eprocedure.js"></script>
+}
+

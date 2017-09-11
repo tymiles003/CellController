@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="CellController.CellController" android:versionCode="1" android:versionName="1.0">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="CellController" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="CellController" android:name="md5358df2907fe3a35fec6a54efeb1e027e.Equipment" />
+    <activity android:label="Idle" android:screenOrientation="landscape" android:name="md5358df2907fe3a35fec6a54efeb1e027e.Idle" />
+    <activity android:label="Login" android:name="md5358df2907fe3a35fec6a54efeb1e027e.Login" />
+    <activity android:label="Offline" android:name="md5358df2907fe3a35fec6a54efeb1e027e.Offline" />
+    <activity android:label="Online" android:screenOrientation="landscape" android:name="md5358df2907fe3a35fec6a54efeb1e027e.Online" />
+    <activity android:noHistory="true" android:screenOrientation="landscape" android:theme="@style/Splash" android:name="md5358df2907fe3a35fec6a54efeb1e027e.SplashActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="TrackIn" android:name="md5358df2907fe3a35fec6a54efeb1e027e.TrackIn" />
+    <activity android:label="GraphicalActivity" android:name="org.achartengine.GraphicalActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="CellController.CellController.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.CellController.CellController" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

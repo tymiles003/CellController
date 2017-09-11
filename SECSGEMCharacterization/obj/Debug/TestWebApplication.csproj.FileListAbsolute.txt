@@ -1,0 +1,36 @@
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.dll
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.pdb
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\obj\Debug\TestWebApplication.dll
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\obj\Debug\TestWebApplication.pdb
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.dll.config
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.Helpers.dll
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.WebPages.dll
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.Razor.dll
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.Helpers.xml
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.WebPages.xml
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.Razor.xml
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Users\wmorata\Desktop\Samples\ConsumeIgnitionRest\TestWebApplication\obj\Debug\TestWebApplication.csprojResolveAssemblyReference.cache
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.dll.config
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.pdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.Helpers.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.WebPages.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.Razor.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.Helpers.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.WebPages.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.Razor.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\obj\Debug\TestWebApplication.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\ConsumeIgnitionRest\TestWebApplication\obj\Debug\TestWebApplication.pdb
+C:\Users\wmorata\Desktop\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.dll.config
+C:\Users\wmorata\Desktop\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.dll
+C:\Users\wmorata\Desktop\ConsumeIgnitionRest\TestWebApplication\bin\TestWebApplication.pdb
+C:\Users\wmorata\Desktop\ConsumeIgnitionRest\TestWebApplication\obj\Debug\TestWebApplication.dll
+C:\Users\wmorata\Desktop\ConsumeIgnitionRest\TestWebApplication\obj\Debug\TestWebApplication.pdb

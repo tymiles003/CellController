@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+
+@section content {
+
+    <link href="~/Content/CustomPanel.css" rel="stylesheet" />
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info panel-custom-myheading">
+                <div class="panel-heading">
+                    <h3 class="panel-title" id="titleView">Manage Equipment</h3>
+                    <button id="cmdAddNewEquipment" class="btn btn-success" style="float:right; top:-8px; position:relative; box-shadow:3px 3px 1px #168572;"><i class="fa fa-plus" aria-hidden="true"></i> Add New Equipment</button>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12" id="mainGridEquipmentContainer">
+                            <br />
+                            <div class="jqxgrid jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis jqxgrid-pageable jqxgrid-virtualmode jqxgrid-pagesizeoptions jqxgrid-showstatusbar jqxgrid-toolbar jqxgrid-columnsresize"
+                                 id="EquipmentGrid"
+                                 grid-width="100"
+                                 data-url="/GenericEquipment/GetEquipmentList"
+                                 grid-selection-mode="singlerow"
+                                 grid-pagesizeoptions="10,15,20,50,100"
+                                 grid-hide-columns="0,6"
+                                 data-action-buttons="Edit,Delete">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-info panel-custom-myheading">
+                <div class="panel-heading">
+                    <h3 class="panel-title" id="titleView">Manage Enrollment</h3>
+                    <button id="cmdAddNew" class="btn btn-success" style="float:right; top:-8px; position:relative; box-shadow:3px 3px 1px #168572;"><i class="fa fa-plus" aria-hidden="true"></i> Add New Enrollment</button>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12" id="mainGridContainer">
+                            <br />
+                            <div class="jqxgrid jqxgrid-autoheight jqxgrid-enablehover jqxgrid-enableellipsis jqxgrid-pageable jqxgrid-virtualmode jqxgrid-pagesizeoptions jqxgrid-showstatusbar jqxgrid-toolbar jqxgrid-columnsresize"
+                                 id="UserEquipmentGrid"
+                                 grid-width="100"
+                                 data-url="/GenericEquipment/GetUserEquipmentList"
+                                 grid-selection-mode="singlerow"
+                                 grid-pagesizeoptions="10,15,20,50,100"
+                                 grid-hide-columns="0"
+                                 data-action-buttons="Edit,Delete">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section JavaScript
+{
+    <script src="~/Scripts/pages/equipment/generic_equipment.js"></script>
+}
+

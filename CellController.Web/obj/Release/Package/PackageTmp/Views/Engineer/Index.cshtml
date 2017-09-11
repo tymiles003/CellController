@@ -1,0 +1,282 @@
+﻿@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+@model List<CellController.Web.ViewModels.EnrolledEquipment>
+@section content
+{
+    <link rel="stylesheet" href="~/Content/CustomPanel.css" />
+    <link rel="stylesheet" href="~/Content/clearfix.css" />
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Details</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div class="col-md-12">
+                            <div class="form-group col-md-12">
+                                <label for="txtOperator">Operator ID:</label>
+                                <div class="input-group" id="divOper">
+                                    <input type="text" class="form-control" id="txtOperator" placeholder="Operator ID">
+                                    <span class="input-group-btn" title="Focus" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnFocusOperatorID"><span class="glyphicon glyphicon-eye-open"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtLotNumber">Lot Number:</label>
+                                <div class="input-group" id="divLot">
+                                    <input type="text" class="form-control" id="txtLotNumber" style="text-transform:uppercase;" placeholder="Lot Number">
+                                    <span class="input-group-btn" title="Focus" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnFocusLotNumber"><span class="glyphicon glyphicon-eye-open"></span></button>
+                                    </span>
+                                    <span class="input-group-btn" title="Validate Lot" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" id="btnCheckLot"><span class="glyphicon glyphicon-info-sign"></span></button>
+                                    </span>
+                                    <span id="spanWIPData" class="input-group-btn" title="WIP Data" data-toggle="tooltip" style="display:none;">
+                                        <button class="btn btn-default" type="button" id="btnWIPData"><span class="fa fa-balance-scale"></span></button>
+                                    </span>
+                                    <span id="spanEProc" class="input-group-btn" title="EProcedure" data-toggle="tooltip" style="display:none;">
+                                        <button class="btn btn-default" type="button" id="btnEProcedure"><span class="glyphicon glyphicon-list-alt"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="ddEquipment">Machine:</label>
+                                <select id="ddEquipment" class="form-control">
+                                    <option selected disabled>Select Machine</option>
+                                    @try
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <option value="@item.ID">@item.Equipment</option>
+                                        }
+                                    }
+                                    catch { }
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtQuantity">Quantity:</label>
+                                <input type="text" class="form-control" id="txtQuantity" placeholder="Quantity">
+                                @*<div class="input-group">
+                                    <input type="text" class="form-control" id="txtQuantity" placeholder="Quantity">
+                                    <span class="input-group-btn" data-toggle="tooltip" title="Unlock">
+                                        <button class="btn btn-default" type="button" id="btnUnlockQuantity"><span class="glyphicon glyphicon-pencil"></span></button>
+                                    </span>
+                                </div>*@
+                            </div>
+                            <div class="form-group col-md-12" id="divTolerance" style="display:none;">
+                                <label for="txtToleranceQuantity">Tolerance Quantity <label id="lblTolerancePercent"></label>:</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="txtToleranceQuantity" placeholder="Tolerance Quantity">
+                                    <span class="input-group-btn" title="Tolerance" data-toggle="tooltip">
+                                        <button class="btn btn-default" type="button" disabled="disabled">
+                                            <span style="font-weight:bold;">&plusmn;</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtComment">Comment:</label>
+                                <textarea class="form-control" rows="4" id="txtComment" placeholder="Comment"></textarea>
+                            </div>
+                            <div class="col-md-12" style="text-align:center;display:none;">
+                                <button id="btnTrackIn" class="btn btn-info">Track In</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8" style="display:none;" id="divLotInfo">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Lot Information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div style="width:100%;text-align:center;" id="divLotResult"><label id="lblLotResult" style="font-weight:bold;">&nbsp;</label></div>
+                        <br />
+                        <div>
+                            <table align="left">
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtProductName">Product Name:</label>
+                                            <input type="text" class="form-control" id="txtProductName" placeholder="Product Name">
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtProductLine">Product Line:</label>
+                                            <input type="text" class="form-control" id="txtProductLine" placeholder="Product Line">
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td style="display:none;">
+                                        <div class="form-group">
+                                            <label for="txtProcessSpecObjectCategory">Object Category:</label>
+                                            <input type="text" class="form-control" id="txtProcessSpecObjectCategory" placeholder="Object Category">
+                                        </div>
+                                    </td>
+                                    <td style="display:none;">&nbsp;</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtStep">Operation:</label>
+                                            <input type="text" class="form-control" id="txtStep" placeholder="Step">
+                                        </div>
+                                    </td>
+                                    <td style="display:none;">&nbsp;</td>
+                                    <td style="display:none;">
+                                        <div class="form-group">
+                                            <label for="txtLotStatus">Lot Status:</label>
+                                            <input type="text" class="form-control" id="txtLotStatus" placeholder="Lot Status">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8" style="display:none;" id="divTemplateInfo">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Template Information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div style="width:100%;text-align:center;" id="divTemplateResult"><label id="lblTemplateResult" style="font-weight:bold;">&nbsp;</label></div>
+                        <br />
+                        <div id="divLoadTemplate">
+                            <button id="btnSend" class="btn btn-info" disabled="disabled">Load Template</button>
+                        </div>
+                        <br />
+                        <div class="clearfix">
+                            <table align="left">
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtPartNo">Part Number:</label>
+                                            <input type="text" class="form-control" id="txtPartNo" placeholder="Part Number">
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtPkgGroup">Package Group:</label>
+                                            <input type="text" class="form-control" id="txtPkgGroup" placeholder="Package Group">
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtTemplate">Template:</label>
+                                            <input type="text" class="form-control" id="txtTemplate" placeholder="Template">
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtNumLine">Num Line:</label>
+                                            <input type="text" class="form-control" id="txtNumLine" placeholder="Number of Lines">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtPkgTemp">Pkg Temp:</label>
+                                            <input type="text" class="form-control" id="txtPkgTemp" placeholder="Pkg Temp">
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="txtCASName">CAS Name:</label>
+                                            <input type="text" class="form-control" id="txtCASName" placeholder="CAS Name">
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td style="vertical-align:top;">
+                                        <div>
+                                            <label for="lnkCAS">CAS Link:</label>
+                                        </div>
+                                        <div style="padding-top:7px;word-wrap: break-word;width:250px;">
+                                            <a href="" id="lnkCAS" style="display:none;" target="_blank"></a>
+                                            <label id="lblNoCAS" style="display:none;">N/A</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="display:none;">
+                                        <div class="form-group">
+                                            <label for="ddMarkReq">Marking Required:</label>
+                                            <select id="ddMarkReq" class="form-control">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td style="display:none;">&nbsp;</td>
+                                    <td style="display:none;">
+                                        <div class="form-group">
+                                            <label for="txtMarkingLayout">Marking Layout:</label>
+                                            <input type="text" class="form-control" id="txtMarkingLayout" placeholder="Marking Layout">
+                                        </div>
+                                    </td>
+                                    <td style="display:none;">&nbsp;</td>
+                                    <td style="display:none;">
+                                        <div class="form-group">
+                                            <label for="txtTType">TTYPE:</label>
+                                            <input type="text" class="form-control" id="txtTType" placeholder="TTYPE">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="divPreview">
+                        </div>
+                        <div class="form-group">
+                            <div id="divDynaLine">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8" style="display:none;" id="divRecipeInfo">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Recipe Information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div style="width:100%;text-align:center;display:none;" id="divRecipeResult"><label id="lblRecipeResult" style="font-weight:bold;">&nbsp;</label></div>
+                        <br />
+                        <div id="divLoadRecipe" style="display:none;">
+                            <button id="btnSendRecipe" class="btn btn-info" disabled="disabled">Load Recipe</button>
+                        </div>
+                        <div class="clearfix">
+                            <div id="divDynaRecipe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section JavaScript
+{
+    <script src="~/Scripts/pages/engineer.js"></script>
+}

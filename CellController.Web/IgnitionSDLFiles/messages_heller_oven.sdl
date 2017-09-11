@@ -1,0 +1,2673 @@
+{
+   "doc": ["SECS stream/functions and items are listed and defined in this document."],
+   "formats": {
+      "A": {"doc": "ASCII"},
+      "B": {"doc": "Binary"},
+      "B64": {"doc": "Binary encoded as Base64 string"},
+      "J": {"doc": "JIS-8"},
+      "L": {"doc": "List"},
+      "Bool": {"doc": "Boolean"},
+      "Local": {"doc": "Two Byte Character String"},
+      "U1": {"doc": "Unsigned Integer One Byte"},
+      "U2": {"doc": "Unsigned Integer Two Bytes"},
+      "U4": {"doc": "Unsigned Integer Four Bytes"},
+      "U8": {"doc": "Unsigned Integer Eight Bytes"},
+      "I1": {"doc": "Signed Integer One Byte"},
+      "I2": {"doc": "Signed Integer Two Bytes"},
+      "I4": {"doc": "Signed Integer Four Bytes"},
+      "I8": {"doc": "Signed Integer Eight Bytes"},
+      "F4": {"doc": "Floating Point Four Bytes"},
+      "F8": {"doc": "Floating Point Eight Bytes"},
+      "I": {
+         "doc": "Signed Integer",
+         "formats": [
+            "I1",
+            "I2",
+            "I4",
+            "I8"
+         ]
+      },
+      "U": {
+         "doc": "Unsigned Integer",
+         "formats": [
+            "U1",
+            "U2",
+            "U4",
+            "U8"
+         ]
+      },
+      "F": {
+         "doc": "Floating Point",
+         "formats": [
+            "F4",
+            "F8"
+         ]
+      }
+   },
+   "items": {
+      "A": {
+         "ACCESSMODE": {
+            "doc": ["ACCESSMODE, Load Port Access Mode"],
+            "formats": ["U1"],
+            "codes": {
+               "0": "Manual",
+               "1": "Auto"
+            }
+         },
+         "ACKA": {
+            "doc": ["ACKA, Indicates success of a request"],
+            "formats": ["Bool"],
+            "codes": {
+               "0": "False",
+               "1": "True"
+            }
+         },
+         "ACKC5": {
+            "doc": ["ACKC5, Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Accepted",
+               ">": [
+                  0,
+                  "Error, not accepted"
+               ]
+            }
+         },
+         "ACKC6": {
+            "doc": ["ACKC6, Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Accepted",
+               ">": [
+                  0,
+                  "Error, not accepted"
+               ]
+            }
+         },
+         "ACKC7": {
+            "doc": ["ACKC7, Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Accepted",
+               "1": "Permission not granted",
+               "2": "Length error",
+               "3": "Matrix overflow",
+               "4": "PPID not found",
+               "5": "Mode unsupported",
+               "6": "Command will be performed with completion signaled later",
+               ">": [
+                  6,
+                  "Other error"
+               ]
+            }
+         },
+         "ACKC10": {
+            "doc": ["ACKC10, Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Accepted for display",
+               "1": "Message will not be displayed",
+               "2": "Terminal not available"
+            }
+         },
+         "ALCD": {
+            "doc": [
+               "ALCD, Alarm Code Byte",
+               "bit 8 = 1 means alarm set",
+               "bit 8 = 0 means alarm cleared",
+               "bit 7-1 is alarm category"
+            ],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Not Used",
+               "1": "Alarm Cleared, Personal Safety",
+               "2": "Alarm Cleared, Equipment Safety",
+               "3": "Alarm Cleared, Parameter Control Warning",
+               "4": "Alarm Cleared, Parameter Control Error",
+               "5": "Alarm Cleared, Irrecoverable Error",
+               "6": "Alarm Cleared, Equipment Status Warning",
+               "7": "Alarm Cleared, Attention flags",
+               "8": "Alarm Cleared, Data integrity",
+               "><": [
+                  8,
+                  128,
+                  "Alarm Cleared, Other categories"
+               ],
+               "128": "Not Used",
+               "129": "Alarm Set, Personal Safety",
+               "130": "Alarm Set, Equipment Safety",
+               "131": "Alarm Set, Parameter Control Warning",
+               "132": "Alarm Set, Parameter Control Error",
+               "133": "Alarm Set, Irrecoverable Error",
+               "134": "Alarm Set, Equipment Status Warning",
+               "135": "Alarm Set, Attention flags",
+               "136": "Alarm Set, Data integrity",
+               ">": [
+                  136,
+                  "Alarm Cleared, Other categories"
+               ]
+            }
+         },
+         "ALED": {
+            "doc": ["ALED, Alarm Enable/Disable Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               ">": [
+                  127,
+                  "Enable Alarm"
+               ],
+               "<": [
+                  128,
+                  "Disable Alarm"
+               ]
+            }
+         },
+         "ALID": {
+            "doc": ["ALID, Alarm Identification"],
+            "formats": ["U"]
+         },
+         "ALTX": {
+            "doc": ["ALTX, Alarm Text"],
+            "formats": ["A"],
+            "max": 120
+         },
+         "ATTRDATA": {
+            "doc": ["ATTRDATA, Contains a specific attribute value for a specific object."],
+            "formats": [
+               {
+                  "format": "L",
+                  "item": "ATTRDATA"
+               },
+               "B",
+               "Bool",
+               "A",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "ATTRID": {
+            "doc": ["ATTRID,Identifier for an attribute for a specific type of object."],
+            "formats": [
+               "A",
+               "U"
+            ]
+         }
+      },
+      "C": {
+         "CAACK": {
+            "doc": ["CAACK, Carrier Action Acknowledge Code"],
+            "formats": ["U1"],
+            "codes": {
+               "0": "Acknowledge, command has been performed",
+               "1": "Invalid command",
+               "2": "Can not perform now",
+               "3": "Invalid data or argument",
+               "4": "Acknowledge, request will be performed with completion signaled later by an event",
+               "5": "Rejected. Invalid state",
+               "6": "Command performed with errors"
+            }
+         },
+         "CARRIERACTION": {
+            "doc": ["CARRIERACTION, Specifies the action requested for a carrier"],
+            "formats": ["A"]
+         },
+         "CARRIERID": {
+            "doc": ["CARRIERID, The identifier of a carrier"],
+            "formats": ["A"]
+         },
+         "CATTRDATA": {
+            "doc": ["CATTRDATA, The value of a carrier attribute"],
+            "formats": [
+               {
+                  "format": "L",
+                  "item": "CATTRDATA"
+               },
+               "B",
+               "Bool",
+               "A",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "CATTRID": {
+            "doc": ["CATTRID, The name of a carrier attribute"],
+            "formats": ["A"]
+         },
+         "CCODE": {
+            "doc": [
+               "CCODE, Command Code",
+               "Each command code corresponds to a unique process operation the machine is capable of performing."
+            ],
+            "formats": [
+               "A",
+               "I2",
+               "I4",
+               "U2",
+               "U4"
+            ]
+         },
+         "CEED": {
+            "doc": ["CEED, Collection event or trace enable/disable code"],
+            "formats": ["Bool"],
+            "bytes": 1,
+            "codes": {
+               "0": "Disable",
+               "1": "Enable"
+            }
+         },
+         "CEID": {
+            "doc": ["CEID, Collected Event ID"],
+            "formats": ["U"]
+         },
+         "COMMACK": {
+            "doc": ["COMMACK, Establish Communications Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Accepted",
+               "1": "Denied, Try Again"
+            }
+         },
+         "CPACK": {
+            "doc": ["CPACK, Command Parameter Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "1": "Parameter Name (CPNAME) does not exist",
+               "2": "Illegal Value specified for CPVAL",
+               "3": "Illegal Format specified for CPVAL",
+               ">": [
+                  3,
+                  "Other equipment specific error"
+               ]
+            }
+         },
+         "CPNAME": {
+            "doc": ["CPNAME, Command Parameter Name"],
+            "formats": ["A"],
+            "max": 40
+         },
+         "CPVAL": {
+            "doc": ["CPVAL, Command Parameter Value"],
+            "formats": [
+               "A",
+               "B",
+               "Bool",
+               "U",
+               "I"
+            ]
+         }
+      },
+      "D": {
+         "DATAID": {
+            "doc": ["DATAID, Data ID"],
+            "formats": ["U"]
+         },
+         "DATALENGTH": {
+            "doc": ["DATALENGTH, Total bytes to be sent"],
+            "formats": ["U"]
+         },
+         "DRACK": {
+            "doc": [
+               "DRACK, Define Report Acknowledge Code",
+               "If an error condition is detected the entire message is rejected (i.e., partial changes are not allowed)."
+            ],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Accepted",
+               "1": "Denied. Insufficient space",
+               "2": "Denied. Invalid format",
+               "3": "Denied. At least one RPTID already defined",
+               "4": "Denied. At least VID does not exist",
+               ">": [
+                  4,
+                  "Other errors"
+               ]
+            }
+         },
+         "DSPER": {
+            "doc": [
+               "DSPER, Data sample period.",
+               "DSPER has two allowable formats:",
+               "Format 1: hhmmss, 6 bytes",
+               "Format 2: hhmmsscc, 8 bytes",
+               "Where hh is hours, mm is minutes, ss is seconds, and cc is centiseconds.",
+               "Equipment shall either (1) support only Format 1, or (2) support both Format 1 and Format 2.",
+               "Equipment shall document which formats it accepts.",
+               "Equipment which supports Format 2 need not necessarily support a minimum DSPER of 1 centisecond,",
+               "nor a trace resolution of 1 centisecond, but equipment suppliers shall document its trace performance limits."
+            ],
+            "formats": ["A"],
+            "pattern": "^[0-9]{6}|[0-9]{8}$"
+         }
+      },
+      "E": {
+         "EAC": {
+            "doc": ["EAC, Equipment Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Acknowledge",
+               "1": "Denied. At least one constant does not exist",
+               "2": "Denied. Busy",
+               "3": "Denied. At least one constant out of range",
+               ">": [
+                  3,
+                  "Other equipment specific error"
+               ]
+            }
+         },
+         "ECDEF": {
+            "doc": ["ECDEF, Equipment Constant Default value"],
+            "formats": [
+               {
+                  "format": "L",
+                  "item": "ECDEF"
+               },
+               "A",
+               "B",
+               "Bool",
+               "J",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "ECID": {
+            "doc": ["ECID, Equipment Constant ID"],
+            "formats": ["U"]
+         },
+         "ECMAX": {
+            "doc": ["ECMAX, Equipment Constant Maximum value"],
+            "formats": [
+               "A",
+               "B",
+               "Bool",
+               "J",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "ECMIN": {
+            "doc": ["ECMIN, Equipment Constant Minimum value"],
+            "formats": [
+               "A",
+               "B",
+               "Bool",
+               "J",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "ECNAME": {
+            "doc": ["ECNAME, Equipment Constant Name"],
+            "formats": ["A"]
+         },
+         "ECV": {
+            "doc": ["ECV, Equipment Constant Value"],
+            "formats": [
+               {
+                  "format": "L",
+                  "item": "ECV"
+               },
+               "A",
+               "B",
+               "Bool",
+               "J",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "EDID": {
+            "doc": ["EDID, Expected Data Identification"],
+            "formats": [
+               "A",
+               "B",
+               "U",
+               "I"
+            ]
+         },
+         "ERACK": {
+            "doc": ["ERACK, Enable/Disable Event Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Accepted",
+               "1": "Denied. At least one CEID does not exist",
+               ">": [
+                  1,
+                  "Other Errors"
+               ]
+            }
+         },
+         "ERRCODE": {
+            "doc": ["ERRCODE, Code identifying an error"],
+            "formats": ["U"],
+            "codes": {
+               "0": "No error",
+               "1": "Unknown object in Object Specifier",
+               "2": "Unknown target object type",
+               "3": "Unknown object instance",
+               "4": "Unknown attribute name",
+               "5": "Read-only attribute - access denied",
+               "6": "Unknown object type",
+               "7": "Invalid attribute value",
+               "8": "Syntax error",
+               "9": "Verification error",
+               "10": "Validation error",
+               "11": "Object identifier in use",
+               "12": "Parameters improperly specified",
+               "13": "Insufficient parameters specified",
+               "14": "Unsupported option requested",
+               "15": "Busy",
+               "16": "Not available for processing",
+               "17": "Command not valid for current state",
+               "18": "No material altered",
+               "19": "Material partially processed",
+               "20": "All material processed",
+               "21": "Recipe specification related error",
+               "22": "Failed during processing",
+               "23": "Failed while not processing",
+               "24": "Failed due to lack of material",
+               "25": "Job aborted",
+               "26": "Job stopped",
+               "27": "Job cancelled",
+               "28": "Cannot change selected recipe",
+               "29": "Unknown event",
+               "30": "Duplicate report ID",
+               "31": "Unknown data report",
+               "32": "Data report not linked",
+               "33": "Unknown trace report",
+               "34": "Duplicate trace ID",
+               "35": "Too many data reports",
+               "36": "Sample period out of range",
+               "37": "Group size too large",
+               "38": "Recovery action currently invalid",
+               "39": "Busy with another recovery currently unable to perform the recovery",
+               "40": "No active recovery action",
+               "41": "Exception recovery failed",
+               "42": "Exception recovery aborted",
+               "43": "Invalid table element",
+               "44": "Unknown table element",
+               "45": "Cannot delete predefined",
+               "46": "Invalid token",
+               "47": "Invalid parameter",
+               "48": "Load port does not exist",
+               "49": "Load port already in use",
+               "50": "Missing Carrier",
+               "32768": "Action will be performed at earliest opportunity",
+               "32769": "Action can not be performed now",
+               "32770": "Action failed due to errors",
+               "32771": "Invalid command",
+               "32772": "Client Alr",
+               "32773": "Duplicate ClientID",
+               "32774": "Invalid ClientType",
+               "32775": "IncompatibleVersions",
+               "32776": "Unrecognized ClientID (Client not currently connected)",
+               "32777": "Failed (Completed Unsuccess-fully)",
+               "32778": "Failed (Unsafe) \u2014 External intervention required",
+               "32779": "Sensor-Detected Obstacle",
+               "32780": "Material Not Sent",
+               "32781": "Material Not Received",
+               "32782": "Material Lost",
+               "32783": "Hardware Failure",
+               "32784": "Transfer Cancelled"
+            }
+         },
+         "ERRTEXT": {
+            "doc": ["ERRTEXT, Text string describing the error noted in the corresponding ERRCODE"],
+            "formats": ["A"],
+            "max": 120
+         }
+      },
+      "G": {
+         "GRANT": {
+            "doc": ["GRANT, Grant code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Permission Granted",
+               "1": "Busy, Try Again",
+               "2": "No Space Available",
+               "3": "Duplicate DATAID",
+               ">": [
+                  3,
+                  "Equipment Specific Error Code"
+               ]
+            }
+         },
+         "GRANT6": {
+            "doc": ["GRANT6, Permission to send"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Permission granted",
+               "1": "Busy, try again",
+               "2": "Not interested",
+               ">": [
+                  2,
+                  "Other err"
+               ]
+            }
+         }
+      },
+      "H": {"HCACK": {
+         "doc": ["HCACK, Host Command Parameter Acknowledge Code"],
+         "formats": ["B", "U1"],
+         "bytes": 1,
+         "codes": {
+            "0": "Acknowledge, command has been performed",
+            "1": "Command does not exist",
+            "2": "Cannot perform now",
+            "3": "At least one parameter is invalid",
+            "4": "Acknowledge, command will be performed with completion signaled later by an event",
+            "5": "Rejected, Already in Desired Condition",
+            "6": "No such object exists"
+         }
+      }},
+      "L": {
+         "LENGTH": {
+            "doc": ["LENGTH, Length of the service program or process program in bytes."],
+            "formats": ["U"]
+         },
+         "LRACK": {
+            "doc": ["LRACK, Link Report Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Accepted",
+               "1": "Denied. Insufficient space",
+               "2": "Denied. Invalid format",
+               "3": "Denied. At least one CEID link already defined",
+               "4": "Denied. At least one CEID does not exist",
+               "5": "Denied. At least one RPTID does not exist",
+               ">": [
+                  5,
+                  "Other errors"
+               ]
+            }
+         }
+      },
+      "M": {
+         "MDLN": {
+            "doc": ["MDLN, Equipment Model Type"],
+            "formats": ["A"],
+            "max": 20
+         },
+         "MEXP": {
+            "doc": ["MEXP, Message expected in the form SxxFyy where x is stream and y is function."],
+            "formats": ["A"],
+            "max": 6
+         },
+         "MF": {
+            "doc": [
+               "MF, Material Format code",
+               "Items with format A will be a unit identifier for one of the special SECS generic units, as specified in ? 12."
+            ],
+            "formats": [
+               "B",
+               "A"
+            ],
+            "bytes": 1,
+            "codes": {
+               "1": "Quantities in wafers",
+               "2": "Quantities in cassette",
+               "3": "Quantities in die or chips",
+               "4": "Quantities in boats",
+               "5": "Quantities in ingots",
+               "6": "Quantities in leadframes",
+               "7": "Quantities in lots",
+               "8": "Quantities in magazines",
+               "9": "Quantities in packages",
+               "10": "Quantities in plates",
+               "11": "Quantities in tubes",
+               "12": "Quantities in waterframes",
+               "13": "Quantities in carriers",
+               "14": "Quantities in substrates"
+            }
+         },
+         "MHEAD": {
+            "doc": ["MHEAD, SECS message block header associated with message block in error."],
+            "formats": ["B"]
+         },
+         "MID": {
+            "doc": ["MID, Material ID"],
+            "formats": [
+               "B",
+               "A"
+            ],
+            "max": 80
+         }
+      },
+      "O": {
+         "OBJACK": {
+            "doc": ["OBJACK, Acknowledge code"],
+            "formats": ["U1"],
+            "codes": {
+               "0": "Successful completion of requested data",
+               "1": "Error"
+            }
+         },
+         "OBJSPEC": {
+            "doc": [
+               "OBJSPEC, A text string that has an internal format and that is used to point to a specific object instance.",
+               "The string is formed out of a sequence of formatted substrings, each specifying an object\u2019s type and identifier.",
+               "The substring format has the following four fields:",
+               "object type, colon character ':', object identifier, greater-than symbol '>'",
+               "where the colon character ':' is used to terminate an object type and the \"greater than\" symbol '>' is used to terminate an identifier field.",
+               "The object type field may be omitted where it may be otherwise determined.",
+               "The final '>' is optional."
+            ],
+            "formats": ["A"]
+         },
+         "OBJTYPE": {
+            "doc": [
+               "OBJTYPE, Identifier for a group or class of objects",
+               "All objects of the same type must have the same set of attributes available."
+            ],
+            "formats": [
+               "A",
+               "U"
+            ]
+         },
+         "OFLACK": {
+            "doc": ["OFLACK, Acknowledge code for OFF-LINE request"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {"0": "OFF-LINE Acknowledge"}
+         },
+         "ONLACK": {
+            "doc": ["ONLACK, Acknowledge code for ON-LINE request"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "ON-LINE Accepted",
+               "1": "ON-LINE Not Allowed",
+               "2": "Equipment Already ON-LINE"
+            }
+         }
+      },
+      "P": {
+         "PARAMNAME": {
+            "doc": ["PARAMNAME, The name of a parameter in a request"],
+            "formats": ["A"]
+         },
+         "PARAMVAL": {
+            "doc": [
+               "PARAMVAL, The value of the parameter named in PARAMNAME",
+               "Values that are lists are restricted to lists of single items of the same format type."
+            ],
+            "formats": [
+               {
+                  "format": "L",
+                  "item": "PARAMVAL"
+               },
+               "A",
+               "B",
+               "Bool",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "PORTACTION": {
+            "doc": ["PORTACTION, tThe action to be performed on a port"],
+            "formats": ["A"]
+         },
+         "PPARM": {
+            "doc": ["PPARM, Process Parameter"],
+            "formats": [
+               "A",
+               "Bool",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "PPBODY": {
+            "doc": [
+               "PPBODY, Process Program Body",
+               "The process program describes to the equipment, in its own language, the actions to be taken in processing the material it receives."
+            ],
+            "formats": [
+               "A",
+               "B",
+               "B64",
+               "U",
+               "I"
+            ]
+         },
+         "PPGNT": {
+            "doc": ["PPGNT, Process Program Grant status"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "OK",
+               "1": "Already have",
+               "2": "No space",
+               "3": "Invalid PPID",
+               "4": "Busy, try later",
+               "5": "Will not accept",
+               ">": [
+                  5,
+                  "Other error"
+               ]
+            }
+         },
+         "PPID": {
+            "doc": [
+               "PPID, Process Program ID",
+               "The format used in the PPID will be host dependent.",
+               "For internal use of the equipment, the PPID can be treated as a unique B pattern.",
+               "If the local equipment is not prepared to display the transmitted code, the display should be in hexadecimal form."
+            ],
+            "formats": ["A"],
+            "max": 120
+         },
+         "PRJOBID": {
+            "doc": ["PRJOBID, Text string which uniquely identifies a process job"],
+            "formats": ["A"]
+         },
+         "PRPAUSEEVENT": {
+            "doc": [
+               "PRPAUSEEVENT, The list of event identifiers, which may be sent as an attribute value to a process job.",
+               "When a process job encounters one of these events it will pause, until it receives the PRJobCommand RESUME."
+            ],
+            "formats": [{
+               "format": "L",
+               "item": "CEID"
+            }]
+         },
+         "PRPROCESSSTART": {
+            "doc": ["PRPROCESSSTART, Indicates that the process resource start processing immediately when ready."],
+            "formats": ["Bool"],
+            "codes": {
+               "0": "Manual Start",
+               "1": "Automatic Start"
+            }
+         },
+         "PRRECIPEMETHOD": {
+            "doc": ["PRRECIPEMETHOD, Indicates the recipe specification type, whether tuning is applied and which method is used."],
+            "formats": ["U1"],
+            "codes": {
+               "1": "Recipe only",
+               "2": "Recipe with variable tuning"
+            }
+         },
+         "PRSTATE": {
+            "doc": ["PRSTATE, Enumerated value"],
+            "formats": ["U1"]
+         },
+         "PTN": {
+            "doc": ["PTN, Material Port number"],
+            "formats": [
+               "B",
+               "U1"
+            ],
+            "bytes": 1
+         }
+      },
+      "R": {
+         "RCMD": {
+            "doc": ["RCMD, Remote Command"],
+            "formats": ["A"]
+         },
+         "RCPPARNM": {
+            "doc": ["RCPPARNM, The name of a recipe variable parameter."],
+            "formats": ["A"],
+            "max": 256
+         },
+         "RCPPARVAL": {
+            "doc": ["RCPPARVAL, The initial setting assigned to a recipe variable parameter."],
+            "formats": [
+               {
+                  "format": "L",
+                  "item": "RCPPARVAL"
+               },
+               "A",
+               "B",
+               "Bool",
+               "F",
+               "U",
+               "I"
+            ],
+            "max": 80
+         },
+         "RCPSPEC": {
+            "doc": ["RCPSEC, Recipe specifier. The object specifier of a recipe."],
+            "formats": ["A"]
+         },
+         "REPGSZ": {
+            "doc": ["REPGSZ, Reporting Group Size"],
+            "formats": ["U"]
+         },
+         "RPTID": {
+            "doc": ["RPTID, Report ID"],
+            "formats": ["U"]
+         }
+      },
+      "S": {
+         "SHEAD": {
+            "doc": ["SHEAD, Stored header related to the transaction timer."],
+            "formats": ["B"]
+         },
+         "SLOTID": {
+            "doc": [
+               "SLOTID, Used to reference material by slot (a position that holds material/substrates) in a carrier.",
+               "This item may be implemented as an array in some messages."
+            ],
+            "formats": ["U1"]
+         },
+         "SMPLN": {
+            "doc": ["SMPLN, Sample Number"],
+            "formats": [
+               "U",
+               "I"
+            ]
+         },
+         "SOFTREV": {
+            "doc": ["SOFTREV, Software Revision Code"],
+            "formats": ["A"],
+            "max": 20
+         },
+         "STIME": {
+            "doc": [
+               "STIME, Sample Time",
+               "12 or 16 bytes, or Extended format as specified by the TimeFormat equipment constant value setting.",
+               "12-byte format: YYMMDDhhmmss",
+               "16-byte format: YYYYMMDDhhmmsscc",
+               "Extended (max 32 byte) format: format YYYY-MM-DDThh:mm:ss.sTZD (see SEMI E148)"
+            ],
+            "formats": ["A"],
+            "max": 32
+         },
+         "SV": {
+            "doc": ["SV, Status Variable"],
+            "formats": [
+               {
+                  "format": "L",
+                  "item": "SV"
+               },
+               "B",
+               "Bool",
+               "A",
+               "J",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "SVID": {
+            "doc": [
+               "SVID, Status Variable ID",
+               "Status variables may include any parameter that can be sampled in time such as temperature or quantity."
+            ],
+            "formats": ["U"]
+         },
+         "SVNAME": {
+            "doc": ["SVNAME, Status Variable Name"],
+            "formats": ["A"]
+         }
+      },
+      "T": {
+         "TEXT": {
+            "doc": ["TEXT, a single line of characters."],
+            "formats": [
+               "A",
+               "B",
+               "Local",
+               "U",
+               "I"
+            ]
+         },
+         "TIACK": {
+            "doc": ["TIACK, Time Acknowledge Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "OK",
+               "1": "Error, not done"
+            }
+         },
+         "TIAACK": {
+            "doc": ["TIAACK, Equipment Acknowledgement Code"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Everything correct",
+               "1": "Too many SVIDs",
+               "2": "No more traces allowed",
+               "3": "Invalid period",
+               "4": "Unknown SVID specified",
+               "5": "Invalid REPGSZ",
+               ">": [
+                  63,
+                  "Equipment specified error"
+               ]
+            }
+         },
+         "TID": {
+            "doc": ["TID, Terminal number"],
+            "formats": ["B"],
+            "bytes": 1,
+            "codes": {
+               "0": "Single or main terminal",
+               ">": [
+                  0,
+                  "Additional terminals at the same equipment"
+               ]
+            }
+         },
+         "TIME": {
+            "doc": [
+               "TIME, Time of day",
+               "12, 16 bytes, or Extended format as specified by the TimeFormat equipment constant value setting.",
+               "12-byte format YYMMDDhhmmss",
+               "16-byte format YYYYMMDDhhmmsscc",
+               "Extended (max 32 byte) format YYYY-MM-DDThh:mm:ss.sTZD (see SEMI E148)"
+            ],
+            "formats": ["A"],
+            "max": 32
+         },
+         "TOTSMP": {
+            "doc": ["TOTSMP, Total Samples"],
+            "formats": ["U"]
+         },
+         "TRID": {
+            "doc": ["TRID, Trace Request ID."],
+            "formats": ["U"]
+         }
+      },
+      "U": {"UNITS": {
+         "doc": ["UNITS, Units Identifier"],
+         "formats": [
+            "A",
+            "B"
+         ]
+      }},
+      "V": {
+         "V": {
+            "doc": ["V, Variable data"],
+            "formats": [
+               {
+                  "format": "L",
+                  "item": "V"
+               },
+               "A",
+               "B",
+               "Bool",
+               "J",
+               "F",
+               "U",
+               "I"
+            ]
+         },
+         "VID": {
+            "doc": ["VID, Variable ID"],
+            "formats": ["U"]
+         }
+      }
+   },
+   "messages": {
+      "defaults": {
+         "doc": ["Default values for properties that are missing."],
+         "block": "single",
+         "reply": false,
+         "direction": "h<->e",
+         "body": null
+      },
+      "S1": {
+         "doc": [
+            "Stream 1 Equipment Status",
+            "This stream provides a means for exchanging information about the status of the",
+            "equipment, including its current mode, depletion of various consumable items, and the status of transfer operations."
+         ],
+         "S1F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S1F1": {
+            "doc": [
+               "Are You There Request",
+               "Establishes if the equipment is on-line.",
+               "A function 0 response to this message means the communication is inoperative.",
+               "In the equipment, a function 0 is equivalent to a timeout on the receive timer after issuing S1,F1 to the host."
+            ],
+            "block": "single",
+            "direction": "h<->e",
+            "reply": true,
+            "autoReply": {
+               "header": {
+                  "stream": 1,
+                  "function": 2,
+                  "reply": false
+               },
+               "body": []
+            }
+         },
+         "S1F2": {
+            "doc": [
+               "On Line Data",
+               "Data signifying that the equipment is alive.",
+               "Exception: The host sends a zero-length list to the equipment."
+            ],
+            "block": "single",
+            "or": [
+               {
+                  "direction": "h<-e",
+                  "body": [
+                     "MDLN",
+                     "SOFTREV"
+                  ]
+               },
+               {
+                  "direction": "h->e",
+                  "body": []
+               }
+            ]
+         },
+         "S1F3": {
+            "doc": [
+               "Selected Equipment Status Request",
+               "A request to the equipment to report the values of selected status variables.",
+               "Exception: A zero-length list means report all SVIDs."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "SVID",
+               "..."
+            ]
+         },
+         "S1F4": {
+            "doc": [
+               "Selected Equipment Status Data",
+               "The equipment reports the value of each status variable requested in the order requested.",
+               "The host remembers the names of values requested.",
+               "Exception: A zero-length list item for SV means that SVID does not exist."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               "SV",
+               "..."
+            ]
+         },
+         "S1F11": {
+            "doc": [
+               "Status Variable Namelist Request",
+               "A request to the equipment to report the name and units of selected status variables.",
+               "Exception: A zero length means report all SVIDs."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "SVID",
+               "..."
+            ]
+         },
+         "S1F12": {
+            "doc": [
+               "Status Variable Namelist Reply",
+               "The equipment reports to the host the name and units of the requested status variables.",
+               "Exception: Zero-length A items for both SVNAME and UNITS indicates that the SVID does not exist."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               [
+                  "SVID",
+                  "SVNAME",
+                  "UNITS"
+               ],
+               "..."
+            ]
+         },
+         "S1F13": {
+            "doc": [
+               "Establish Communications Request",
+               "The purpose of this message is to establish communication between an equipment and host at an application level.",
+               "The purpose of this message is to provide a formal means of initializing communications at a logical application level both on",
+               "power-up and following a break in communications. It should be the following any period where host and Equipment SECS",
+               "applications are unable to communicate. An attempt to send an Establish Communications Request (S1,F13) should be repeated",
+               "at programmable intervals until an Establish Communications Acknowledge (S1,F14) is received within the transaction timeout",
+               "period with an acknowledgement code accepting the establishment.",
+               "Exception: The host sends a zero-length list to the equipment."
+            ],
+            "block": "single",
+            "reply": true,
+            "autoReply": {
+               "header": {
+                  "stream": 1,
+                  "function": 14,
+                  "reply": false
+               },
+               "body": [
+                  {
+                     "format": "B",
+                     "value": 0
+                  },
+                  []
+               ]
+            },
+            "or": [
+               {
+                  "direction": "h->e",
+                  "body": []
+               },
+               {
+                  "direction": "h<-e",
+                  "body": [
+                     "MDLN",
+                     "SOFTREV"
+                  ]
+               }
+            ]
+         },
+         "S1F14": {
+            "doc": [
+               "Establish Communications Request Acknowledge",
+               "Accept or deny Establish Communications Request (S1F13).",
+               "MDLN and SOFTREV are on-line data and are valid only if COMMACK = 0.",
+               "Exception: The host sends a zero-length list for item 2 to the equipment."
+            ],
+            "block": "single",
+            "or": [
+               {
+                  "direction": "h<-e",
+                  "body": [
+                     "COMMACK",
+                     [
+                        "MDLN",
+                        "SOFTREV"
+                     ]
+                  ]
+               },
+               {
+                  "direction": "h->e",
+                  "body": [
+                     "COMMACK",
+                     []
+                  ]
+               }
+            ]
+         },
+         "S1F15": {
+            "doc": [
+               "Request OFF-LINE",
+               "The host requests that the equipment transition to the OFF-LINE state."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true
+         },
+         "S1F16": {
+            "doc": ["OFF-LINE Acknowledge"],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "OFLACK"
+         },
+         "S1F17": {
+            "doc": [
+               "Request ON-LINE",
+               "The host requests that the equipment transition to the ON-LINE state"
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true
+         },
+         "S1F18": {
+            "doc": ["ON-LINE Acknowledge"],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "ONLACK"
+         },
+         "S1F23": {
+            "doc": [
+               "Collection Event Namelist Request",
+               "This function allows the host to retrieve information about what collection event IDs are available in the equipment",
+               "and which data values (DVVALs) are valid for each collection event.",
+               "Exception: A zero-length list means send information for all CEIDs."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "CEID",
+               "..."
+            ]
+         },
+         "S1F24": {
+            "doc": [
+               "Collection Event Namelist",
+               "The equipment reports to the host the information of the collection events and associated VIDs of the CEIDs",
+               "requested with the S1F23 message.",
+               "A listed VID can be conditionally or unconditionally associated with the CEID;",
+               "it is the responsibility of the equipment supplier to document whether the conditional VIDs are reported with S1F24.",
+               "Exception: When both CENAME and the list of associated VIDs are zero-length items, this indicates that CEID does not exist."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               [
+                  "CEID",
+                  "CENAME",
+                  [
+                     "VID",
+                     "..."
+                  ]
+               ],
+               "..."
+            ]
+         }
+      },
+      "S2": {
+         "doc": [
+            "Stream 2 Equipment Control and Diagnostics",
+            "Messages which deal with control of the equipment from the host.",
+            "This includes all remote operations and equipment self-diagnostics and calibration but specifically",
+            "excludes the control operations which are associated with material transfer (see Stream 4),",
+            "loading of executive and boot programs (Stream 8), and all file and operating system calls",
+            "(Streams 10, 13). See also continuations in Stream 17."
+         ],
+         "S2F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S2F13": {
+            "doc": [
+               "Equipment Constant Request",
+               "A request to the equipment to report the values of selected constants.",
+               "Constants such as for calibration, servo gain, alarm limits, data collection mode, and other values that are changed infrequently can be obtained using this message.",
+               "Exception: A zero-length list means report all ECVs according to a predefined order."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "ECID",
+               "..."
+            ]
+         },
+         "S2F14": {
+            "doc": [
+               "Equipment Constant Data",
+               "The equipment reports the value of each constant requested in the order requested.",
+               "Exception: A zero-length list item for ECV means that ECID does not exist. The list format for this data item is not allowed, except in this case."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               "ECV",
+               "..."
+            ]
+         },
+         "S2F15": {
+            "doc": [
+               "New Equipment Constant Send",
+               "Change one or more equipment constants."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               [
+                  "ECID",
+                  "ECV"
+               ],
+               "..."
+            ]
+         },
+         "S2F16": {
+            "doc": [
+               "New Equipment Constant Acknowledge",
+               "Acknowledges or denies modification of equipment constants.",
+               "If EAC contains a non-zero error code, the equipment should not change any of the ECIDs specified in S2F15."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "EAC"
+         },
+         "S2F17": {
+            "doc": [
+               "Date and Time Request",
+               "Get the date and time from the equipment.",
+               "Useful to check equipment time base or for equipment to synchronize with the host time base."
+            ],
+            "block": "single",
+            "direction": "h<->e",
+            "reply": true
+         },
+         "S2F18": {
+            "doc": [
+               "Date and Time Data",
+               "Actual time data from equipment.",
+               "Exception: A zero-length item means no time exists"
+            ],
+            "block": "single",
+            "direction": "h<->e",
+            "body": "TIME"
+         },
+         "S2F23": {
+            "doc": [
+               "Trace Initialize Send",
+               "Report the current values of selected status variables at a regular interval of time.",
+               "Status variables exist at all times. This function provides a way to sample a subset of those status variables as a function of time.",
+               "The trace data is returned on S6,F1 and is related to the original request by the TRID Multiple trace requests may be made to",
+               "that equipment allowing it. If equipment receives S2F23 with the same TRID as a trace function that is currently in progress,",
+               "the equipment should terminate the old trace and then initiate the new trace. A trace function currently in progress may be",
+               "terminated by S2,F23 with TRID of that trace and TOTSMP = 0.",
+               "If S2F23 is multi-block, it must be preceded by the S2F39/S2F40 Inquire/Grant transaction. Some equipment may support",
+               "only single-Block S6F1, and may refuse a S2F23 message which would cause a multi-block S6F1.",
+               "Each equipment shall document its trace performance limits. The Host Computer shall not send an S2F23 which exceeds the",
+               "equipment's performance limits, or the equipment may operate incorrectly.",
+               "TRID = Trace Request ID, DSPER = Data Sample Period, TOTSMP = Total samples to be made.",
+               "REPGSZ = Reporting Group Size, SVID = Status Variable ID"
+            ],
+            "block": "multiple",
+            "direction": "h->e",
+            "reply": true,
+            "CommonID": ["TRID"],
+            "body": [
+               "TRID",
+               "DSPER",
+               "TOTSMP",
+               "REPGSZ",
+               [
+                  "SVID",
+                  "..."
+               ]
+            ]
+         },
+         "S2F24": {
+            "doc": ["Trace Initialize Acknowledge"],
+            "block": "single",
+            "direction": "h<-e",
+            "body": {
+               "doc": ["Equipment Acknowledgment Code"],
+               "formats": ["B"],
+               "bytes": 1,
+               "codes": {
+                  "0": "Everything correct",
+                  "1": "Too many SVIDs",
+                  "2": "No more traces allowed",
+                  "3": "Invalid period",
+                  "4": "Unknown SVID specified",
+                  "5": "Invalid REPGSZ",
+                  ">": [
+                     63,
+                     "Equipment specified error"
+                  ]
+               }
+            }
+         },
+         "S2F29": {
+            "doc": [
+               "Equipment Constant Namelist Request",
+               "A request to the equipment to report information about selected constants.",
+               "This function allows the host to retrieve basic information about what equipment constants are available in the equipment.",
+               "Exception: A zero-length list means send information for all ECIDs."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "ECID",
+               "..."
+            ]
+         },
+         "S2F30": {
+            "doc": [
+               "Equipment Constant Namelist",
+               "The equipment reports to the host information about certain constants.",
+               "Exception: Zero-length A items for ECNAME, ECMIN, ECMAX, ECDEF, and UNITS indicates that the ECID does not exist."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               [
+                  "ECID",
+                  "ECNAME",
+                  "ECMIN",
+                  "ECMAX",
+                  "ECDEF",
+                  "UNITS"
+               ],
+               "..."
+            ]
+         },
+         "S2F31": {
+            "doc": [
+               "Date and Time Set Request",
+               "Set the date and time in the equipment.",
+               "Useful to synchronize the equipment time with the host time base."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": "TIME"
+         },
+         "S2F32": {
+            "doc": ["Date and Time Set Acknowledge"],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "TIACK"
+         },
+         "S2F33": {
+            "doc": [
+               "Define Report",
+               "The purpose of this message is for the host to define a group of reports for the equipment.",
+               "The type of report to be transmitted is designated by a BOOLEAN \"Equipment Constant\".",
+               "An \"Equipment Constant Value\" of \"False\" means that an \"Event Report\" (S6F11) will be sent, and a value of \"True\" means",
+               "that an \"Annotated Event Report\" (S6F13) will be sent. If S2F33 is Multi-block, it must be preceded by the S2F39/S2F40 Inquire/Grant transaction.",
+               "Exception 1: A list of zero-length following DATAID deletes all report definitions and associated links. See S2F35 (Link Event/Report).",
+               "#Exception 2: A list of zero-length following RPTID deletes report type RPTID. All CEID links to this RPTID are also deleted."
+            ],
+            "block": "multiple",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "DATAID",
+               [
+                  [
+                     "RPTID",
+                     [
+                        "VID",
+                        "..."
+                     ]
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S2F34": {
+            "doc": ["Define Report Acknowledge"],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "DRACK"
+         },
+         "S2F35": {
+            "doc": [
+               "Link Event Report",
+               "The purpose of this message is for the host to link n reports to an event (CEID).",
+               "These linked event reports will default to 'disabled' upon linking.",
+               "That is, the occurrence of an event would not cause the report to be sent until enabled.",
+               "See S2F37 for enabling reports.",
+               "If S2F35 is Multi-block, it must be preceded by the S2F39/S2F40 Inquire/Grant transaction.",
+               "#Exception: A list of zero length following CEID deletes all report links to that event."
+            ],
+            "block": "multiple",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "DATAID",
+               [
+                  [
+                     "CEID",
+                     [
+                        "RPTID",
+                        "..."
+                     ]
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S2F36": {
+            "doc": [
+               "Link Event Report Acknowledge",
+               "If an error condition is detected the entire message is rejected (i.e., partial changes are not allowed)."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "LRACK"
+         },
+         "S2F37": {
+            "doc": [
+               "Enable/Disable Event Report",
+               "The purpose of this message is for the host to enable or disable reporting for a group of events (CEIDs).",
+               "The reporting for unlisted (CEIDs) is not affected.",
+               "Exception: A list of zero length following <CEED> means all CEIDs."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "CEED",
+               [
+                  "CEID",
+                  "..."
+               ]
+            ]
+         },
+         "S2F38": {
+            "doc": [
+               "Enable/Disable Event Report Acknowledge",
+               "If an error condition is detected the entire message is rejected, i.e., partial changes are not allowed."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "ERACK"
+         },
+         "S2F39": {
+            "doc": [
+               "Multi-block Inquire",
+               "If a S2,F23, S2,F33, S2,F35, S2,F45, or S2,F49 message is more than one block, this transaction must precede the message."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "DATAID",
+               "DATALENGTH"
+            ]
+         },
+         "S2F40": {
+            "doc": [
+               "Multi-block Grant",
+               "Grant permission to send multi-block message."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "GRANT"
+         },
+         "S2F41": {
+            "doc": [
+               "Host Command Send",
+               "The Host requests the Equipment perform the specified remote command with the associated parameters."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "RCMD",
+               [
+                  [
+                     "CPNAME",
+                     "CPVAL"
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S2F42": {
+            "doc": [
+               "Host Command Acknowledge",
+               "If command is not accepted due to one or more invalid parameters (i.e., HCACK = 3),",
+               "then a list of invalid parameters will be returned containing the parameter name and reason for being invalid."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": [
+               "HCACK"
+            ]
+         }
+      },
+      "S3": {
+         "doc": [
+            "Stream 3 Materials Status",
+            "The functions of the material status stream are used to communicate information and actions related to material,",
+            "including carriers and material-in-process, time-to-completion information, and extraordinary material occurrences."
+         ],
+         "S3F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S3F15": {
+            "doc": [
+               "Materials Multi-Block Inquire",
+               "This message requests permission to send a multi-block message based upon a maximum length of the total message.",
+               "It must be sent prior to sending any multi-block primary message in Stream 3."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "DATAID",
+               "DATALENGTH"
+            ]
+         },
+         "S3F16": {
+            "doc": [
+               "Materials Multi-Block Grant",
+               "This message grants or denies permission to send a multi-block primary message in Stream 3."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "GRANT"
+         },
+         "S3F17": {
+            "doc": [
+               "Carrier Action Request",
+               "This message requests an action to be performed for a specified carrier.",
+               "If multi-block, this message must be preceded by the S3F15/F16 transaction.",
+               "Exception: If variable list has no items, then no carrier attributes are included.",
+               "If CARRIERID is not a zero-length item, then PTN may be omitted (a zero-length item)",
+               "ATTRID and ATTRDATA may be substituted for CATTRID and CATTRDATA respectively.",
+               "ReticlePodLocationID may be used as one of <CATTRID> when the CARRIERACTION is PodRelease and the carrier is not at a Load Port."
+            ],
+            "block": "multiple",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "DATAID",
+               "CARRIERACTION",
+               "CARRIERID",
+               "PTN",
+               [
+                  [
+                     "CATTRID",
+                     "CATTRDATA"
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S3F18": {
+            "doc": [
+               "Carrier Action Acknowledge",
+               "This message acknowledges the carrier action request.",
+               "Exception: If variable list contains no items then no errors exist"
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": [
+               "CAACK",
+               [
+                  [
+                     "ERRCODE",
+                     "ERRTEXT"
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S3F25": {
+            "doc": [
+               "Port Action Request",
+               "This message requests an action be performed for a port.",
+               "Exception: If variable list contains no items, then no parameters are provided."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "PORTACTION",
+               "PTN",
+               [
+                  [
+                     "PARAMNAME",
+                     "PARAMVAL"
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S3F26": {
+            "doc": [
+               "Port Action Acknowledge",
+               "This message acknowledges the port action request.",
+               "Exception: If variable list contains no item then no errors exist."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": [
+               "CAACK",
+               [
+                  [
+                     "ERRCODE",
+                     "ERRTEXT"
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S3F27": {
+            "doc": [
+               "Change Access",
+               "The Host requests the Equipment to change the Access Mode for the specified Load Ports.",
+               "ACCESSMODE specifies the desired Access Mode. PTN specifies a desired Load Port Number.",
+               "If variable list contains no items then the command applies to all Load Ports on the equipment.",
+               "If any specified port is already in the specified Access Mode, then the Equipment shall accept the command,",
+               "and toggle all loadports to specified mode.",
+               "If the Equipment is unable to change one or more of specified Port(s) to the specified Access Mode,",
+               "then the Equipment shall accept the command (with appropriate response acknowledgement),",
+               "and shall change only the Access Mode of those Port(s) allowed by the equipment,",
+               "supplying the host with an indication that not all ports were successfully changed."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "ACCESSMODE",
+               [
+                  "PTN",
+                  "..."
+               ]
+            ]
+         },
+         "S3F28": {
+            "doc": [
+               "Change Access Acknowledge",
+               "If the command is successful, CAACK = 0, and variable list size = 0.",
+               "If the command was successful for some ports, CAACK = 6, and variable list size > 0."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": [
+               "CAACK",
+               [
+                  [
+                     "PTN",
+                     "ERRCODE",
+                     "ERRTEXT"
+                  ],
+                  "..."
+               ]
+            ]
+         }
+      },
+      "S5": {
+         "doc": [
+            "Stream 5 Exception Handling",
+            "This stream contains messages regarding binary and analog equipment exceptions.",
+            "Exceptions are classified into two categories: errors and alarms."
+         ],
+         "S5F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S5F1": {
+            "doc": [
+               "Alarm Report Send",
+               "This message reports a change in or presence of an alarm condition.",
+               "One message will be issued when the alarm is set and one message will be issued when the alarm is cleared.",
+               "Irrecoverable errors and attention flags may not have a corresponding clear message."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "reply": true,
+            "autoReply": {
+               "header": {
+                  "stream": 5,
+                  "function": 2,
+                  "reply": false
+               },
+               "body": {
+                  "format": "B",
+                  "value": 0
+               }
+            },
+            "body": [
+               "ALCD",
+               "ALID",
+               "ALTX"
+            ]
+         },
+         "S5F2": {
+            "doc": [
+               "Alarm Report Acknowledge",
+               "Acknowledge or error."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "body": "ACKC5"
+         },
+         "S5F3": {
+            "doc": [
+               "Enable/Disable Alarm Send",
+               "This message will change the state of the enable bit in the equipment.",
+               "The enable bit determines if the alarm will be sent to the host.",
+               "Alarms which are not controllable in this way are unaffected by this message.",
+               "Exception: A zero-length item for ALID means all alarms."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "ALED",
+               "ALID"
+            ]
+         },
+         "S5F4": {
+            "doc": [
+               "Enable/Disable Alarm Acknowledge",
+               "Acknowledge or error."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "ACKC5"
+         },
+         "S5F5": {
+            "doc": [
+               "List Alarms Request",
+               "This message requests the equipment to send binary and analog alarm information to the host.",
+               "A zero-length item means send all possible alarms regardless of the state of ALED."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": "ALID..."
+         },
+         "S5F6": {
+            "doc": [
+               "List Alarm Data",
+               "This message contains the alarm data known to the equipment.",
+               "A zero-length item returned for ALCD or ALTX means that value does not exist."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               [
+                  "ALCD",
+                  "ALID",
+                  "ALTX"
+               ],
+               "..."
+            ]
+         }
+      },
+      "S6": {
+         "doc": [
+            "Stream 6 Data Collection",
+            "This stream is intended to cover the needs of in-process measurements and equipment monitoring."
+         ],
+         "S6F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S6F1": {
+            "doc": [
+               "Trace Data Send",
+               "This function sends samples to the host according to the trace setup done by S2F23.",
+               "Trace is a time-driven form of equipment status.",
+               "Even if S6F1 is multi-block, it is not preceded by an Inquire/Grant transaction, because the Host S2F23 is an implicit grant.",
+               "Some equipment may support only single-block S6F1, and may refuse an S2F23 (Trace Initiate Send) message which would cause a multi-block S6,F1.",
+               "Exception: A zero-length STIME means no value is given and that the time is to be derived from SMPLN along with knowledge of the request.",
+               "TRID = Trace Request ID, SMPLN = Sample Number, STIME = Sample Time, SV = Status Variable Value"
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "or": [
+               {"reply": true},
+               {"reply": false}
+            ],
+            "CommonID": ["TRID"],
+            "realtime": true,
+            "SQLTags": true,
+            "autoReply": {
+               "header": {
+                  "stream": 6,
+                  "function": 2,
+                  "reply": false
+               },
+               "body": {
+                  "format": "B",
+                  "value": 0
+               }
+            },
+            "body": [
+               "TRID",
+               "SMPLN",
+               "STIME",
+               [
+                  "SV",
+                  "..."
+               ]
+            ]
+         },
+         "S6F2": {
+            "doc": [
+               "Trace Data Acknowledge",
+               "Acknowledge or error."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "body": "ACKC6"
+         },
+         "S6F5": {
+            "doc": [
+               "Multi-block Data Send Inquire",
+               "If the discrete data report S6F3, F9, F11, F13 can involve more than one block, this transaction must precede the transmission."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "reply": true,
+            "autoReply": {
+               "header": {
+                  "stream": 6,
+                  "function": 6,
+                  "reply": false
+               },
+               "body": {
+                  "format": "B",
+                  "value": 0
+               }
+            },
+            "body": [
+               "DATAID",
+               "DATALENGTH"
+            ]
+         },
+         "S6F6": {
+            "doc": ["Multi-block Grant"],
+            "block": "single",
+            "direction": "h->e",
+            "body": "GRANT6"
+         },
+         "S6F11": {
+            "doc": [
+               "Event Report Send",
+               "Sends a report when an event occurs.",
+               "The purpose of this message is for the equipment to send a defined, linked, and enabled group of reports to the host upon the",
+               "occurrence of an event (CEID).",
+               "If S6F11 is Multi-block, it must be preceded by the S6,F5/S6,F6 Inquire/Grant transaction.",
+               "Exception: If there are no reports linked to the event a 'null' report is assumed.",
+               "A zero-length list for number of reports means there are no reports linked to the given CEID."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "reply": true,
+            "CommonID": ["DATAID"],
+            "realtime": true,
+            "SQLTags": [
+               "DATAID",
+               "CEID"
+            ],
+            "autoReply": {
+               "header": {
+                  "stream": 6,
+                  "function": 12,
+                  "reply": false
+               },
+               "body": {
+                  "format": "B",
+                  "value": 0
+               }
+            },
+            "body": [
+               "DATAID",
+               "CEID",
+               [
+                  [
+                     "RPTID",
+                     [
+                        "V",
+                        "..."
+                     ]
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S6F12": {
+            "doc": ["Event Report Acknowledge"],
+            "block": "single",
+            "direction": "h->e",
+            "body": "ACKC6"
+         },
+         "S6F15": {
+            "doc": [
+               "Event Report Request",
+               "The purpose of this message is for the host to demand a given report group from the equipment."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": "CEID"
+         },
+         "S6F16": {
+            "doc": [
+               "Event Report Data",
+               "Equipment sends reports linked to given CEID to host.",
+               "Identical to structure of S6F11.",
+               "A zero-length list for number of reports means there are no reports linked to the given CEID."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               "DATAID",
+               "CEID",
+               [
+                  [
+                     "RPTID",
+                     [
+                        "V",
+                        "..."
+                     ]
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S6F19": {
+            "doc": [
+               "Individual Report Request",
+               "The purpose of this message is for the host to request a defined report from the equipment."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": "RPTID"
+         },
+         "S6F20": {
+            "doc": [
+               "Individual Report Data",
+               "Equipment sends variable data defined for the given RPTID to the host."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               "V",
+               "..."
+            ]
+         }
+      },
+      "S7": {
+         "doc": [
+            "Stream 7 Process Program Management",
+            "The functions in this stream are used to manage and transfer process programs.",
+            "Process programs are the equipment-specific descriptions that determine the procedure to be",
+            "conducted on the material by a single piece of equipment.",
+            "Methods are provided to transfer programs as well as establish the link between the process program",
+            "and the material to be processed with that program."
+         ],
+         "S7F0": {
+            "doc": ["Abort Transaction"],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S7F1": {
+            "doc": [
+               "Process Program Load Inquire",
+               "This message is used to initiate the transfer of a process program or to select from stored programs.",
+               "The message may be used to initiate the transfer of an unformatted process program (S7F3/S7F4)",
+               "or a formatted process program (S7F23/S7F24), (S7F31/S7F32)."
+            ],
+            "block": "single",
+            "direction": "h<->e",
+            "reply": true,
+            "body": [
+               "PPID",
+               "LENGTH"
+            ]
+         },
+         "S7F2": {
+            "doc": [
+               "Process Program Load Grant",
+               "This message gives permission for the process program to be loaded."
+            ],
+            "block": "single",
+            "directions": "h<->e",
+            "body": "PPGNT"
+         },
+         "S7F3": {
+            "doc": [
+               "Process Program Send",
+               "The program is sent.",
+               "If S7F3 is multi-block, it must be preceded by the S7F1/S7F2 Inquire/Grant transaction."
+            ],
+            "block": "multiple",
+            "direction": "h<->e",
+            "reply": true,
+            "body": [
+               "PPID",
+               "PPBODY"
+            ]
+         },
+         "S7F4": {
+            "doc": ["Process Program Acknowledge"],
+            "block": "single",
+            "direction": "h<->e",
+            "body": "ACKC7"
+         },
+         "S7F5": {
+            "doc": [
+               "Process Program Request",
+               "This message is used to request the transfer of a process program."
+            ],
+            "block": "single",
+            "direction": "h<->e",
+            "reply": true,
+            "body": "PPID"
+         },
+         "S7F6": {
+            "doc": [
+               "Process Program Data",
+               "Exception: A zero-length list means request denied."
+            ],
+            "block": "multiple",
+            "direction": "h<->e",
+            "body": {"or": [
+               [
+                  "PPID",
+                  "PPBODY"
+               ],
+               []
+            ]}
+         },
+         "S7F17": {
+            "doc": [
+               "Delete Process Program Send",
+               "This message is used by the host to request the equipment to delete process programs from equipment storage.",
+               "Exception: If variable list size = 0, delete all."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "PPID",
+               "..."
+            ]
+         },
+         "S7F18": {
+            "doc": ["Delete Process Program Acknowledge"],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "ACKC7"
+         },
+         "S7F19": {
+            "doc": [
+               "Current EPPD Request",
+               "This message is used to request the transmission of the current equipment process program directory (EPPD).",
+               "This is a list of all the PPIDs of the process programs stored in the equipment."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true
+         },
+         "S7F20": {
+            "doc": [
+               "Current EPPD Data",
+               "This message is used to transmit the current EPPD."
+            ],
+            "block": "multiple",
+            "direction": "h<-e",
+            "body": [
+               "PPID",
+               "..."
+            ]
+         },
+         "S7F23": {
+            "doc": [
+               "Formatted Process Program Send",
+               "This message allows movement of formatted process programs between a piece of equipment and its host system.",
+               "The values of MDLN and SOFTREV are obtained from the PCD used to generate the process program.",
+               "If S7F23 is multi-block, it must be preceded by the S7F1/F2 Inquire/Grant transaction."
+            ],
+            "block": "multiple",
+            "direction": "h<->e",
+            "reply": true,
+            "body": [
+               "PPID",
+               "MDLN",
+               "SOFTREV",
+               [
+                  [
+                     "CCODE",
+                     [
+                        "PPARM",
+                        "..."
+                     ]
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S7F24": {
+            "doc": [
+               "Formatted Process Program Acknowledge",
+               "Acknowledges reception of a formatted process program at its destination and whether the process program",
+               "was accepted by the interpreter.",
+               "A returned status of \"accepted\" by the interpreter means only that the message is understood.",
+               "The validity of the contents of the process program is determined through a separate transaction (S7F27/S7F28)."
+            ],
+            "block": "single",
+            "direction": "h<->e",
+            "body": "ACKC7"
+         },
+         "S7F25": {
+            "doc": [
+               "Formatted Process Program Request",
+               "This message is used by either equipment or host to request a particular process program from the other."
+            ],
+            "block": "single",
+            "direction": "h<->e",
+            "reply": true,
+            "body": "PPID"
+         },
+         "S7F26": {
+            "doc": [
+               "Formatted Process Program Data",
+               "This message transfers a process program in response to a request for the PPID.",
+               "The values of MDLN and SOFTREV are obtained from the PCD used to generate the process program.",
+               "Exception: A zero length list indicates the request was denied."
+            ],
+            "block": "multiple",
+            "direction": "h<->e",
+            "body": [
+               "PPID",
+               "MDLN",
+               "SOFTREV",
+               [
+                  [
+                     "CCODE",
+                     [
+                        "PPARM",
+                        "..."
+                     ]
+                  ],
+                  "..."
+               ]
+            ]
+         }
+      },
+      "S9": {
+         "doc": [
+            "Stream 9 System Errors",
+            "This stream provides a method of informing the host that a message block has been received",
+            "which cannot be handled or that a timeout on a transaction (receive) timer has occurred.",
+            "The messages indicate either a Message Fault or a Communications Fault has occurred but",
+            "do not indicate a Communications Failure has occurred."
+         ],
+         "S9F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S9F1": {
+            "doc": [
+               "Unrecognized Device ID",
+               "The device ID in the message header did not correspond to any known device ID in the node detecting the error."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "MHEAD"
+         },
+         "S9F3": {
+            "doc": [
+               "Unrecognized Stream Type",
+               "The equipment does not recognize the stream in the message header."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "MHEAD"
+         },
+         "S9F5": {
+            "doc": [
+               "Unrecognized Function Type",
+               "The equipment does not recognize the function in the message header."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "MHEAD"
+         },
+         "S9F7": {
+            "doc": [
+               "Illegal Data",
+               "This message indicates that the stream and function were recognized, but the message format was incorrect."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "MHEAD"
+         },
+         "S9F9": {
+            "doc": [
+               "Transaction Timer Timeout",
+               "This message indicates that the host failed to respond to a request within the expected amount of time. The transaction has been aborted.",
+               "It is up to the host to respond to this error in an appropriate manner to keep the system operational."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "SHEAD"
+         },
+         "S9F11": {
+            "doc": [
+               "Data Too Long",
+               "This message to the host indicates that the equipment has been sent more data than it can handle."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "MHEAD"
+         },
+         "S9F13": {
+            "doc": [
+               "Conversation Timeout",
+               "Data were expected but none were received within a reasonable length of time. Resources have been cleared."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": [
+               "MEXP",
+               "EDID"
+            ]
+         }
+      },
+      "S10": {
+         "doc": [
+            "Stream 10 Terminal Services",
+            "The functions of this stream is to pass textual messages between operator terminals attached to",
+            "processing and/or testing equipment and the host. The equipment makes no attempt to interpret",
+            "the text of the message, but merely passes it from terminal keyboard to the host or from the host to the display of the terminal.",
+            "Management of human response times to information displayed on terminals is the responsibility of the host."
+         ],
+         "S10F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S10F3": {
+            "doc": ["Terminal Display, Single"],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "TID",
+               "TEXT"
+            ]
+         },
+         "S10F4": {
+            "doc": ["Terminal Display, Single Acknowledge"],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "ACKC10"
+         }
+      },
+      "S14": {
+         "doc": [
+            "Stream 14 Object Services",
+            "The functions in this stream are used for generic functions concerning objects,",
+            "including obtaining information about objects and setting values for an object."
+         ],
+         "S14F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S14F9": {
+            "doc": [
+               "Create Object Request",
+               "This message is used to request an object owner to create an object instance.",
+               "OBJSPEC specifies the object owner.",
+               "Exception: If OBJSPEC is a null-length item, no object specifier is provided.",
+               "If variable list size = 0, no specific attribute settings are requested for the new object."
+            ],
+            "block": "multiple",
+            "direction": "h<->e",
+            "reply": true,
+            "body": [
+               "OBJSPEC",
+               "OBJTYPE",
+               [
+                  [
+                     "ATTRID",
+                     "ATTRDATA"
+                  ],
+                  "..."
+               ]
+            ]
+         },
+         "S14F10": {
+            "doc": [
+               "Create Object Acknowledge",
+               "This message is used to acknowledge the success or failure of creating the new object specified.",
+               "If successful, OBJSPEC is the object specifier of the new object.",
+               "The list of attributes returned is dependent upon the type of object specified.",
+               "Exception: If OBJSPEC is a null-length item, no object was created.",
+               "If the attribute list size = 0, then no attributes of the new object are returned.",
+               "If the errors list size = 0, no errors were detected."
+            ],
+            "block": "multiple",
+            "direction": "h<->e",
+            "body": [
+               "OBJSPEC",
+               [
+                  [
+                     "ATTRID",
+                     "ATTRDATA"
+                  ],
+                  "..."
+               ],
+               [
+                  "OBJACK",
+                  [
+                     [
+                        "ERRCODE",
+                        "ERRTEXT"
+                     ],
+                     "..."
+                  ]
+               ]
+            ]
+         }
+      },
+      "S16": {
+         "doc": [
+            "Stream 16 Processing Management",
+            "This stream provides protocol for a set of messages that enable the control of material processing at equipment and equipment resources."
+         ],
+         "S16F0": {
+            "doc": [
+               "Abort Transaction",
+               "Used in lieu of an expected reply to abort a transaction.",
+               "Function 0 is defined in every stream and has the same meaning in every stream."
+            ],
+            "block": "single",
+            "direction": "h<->e"
+         },
+         "S16F1": {
+            "doc": [
+               "Multi-block Process Job Data Inquire",
+               "If any of Processing Management messages are larger than one block, then this transaction must precede that message."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "DATAID",
+               "DATALENGTH"
+            ]
+         },
+         "S16F2": {
+            "doc": [
+               "Multi-block Process Job Data Grant",
+               "Message to indicate if permission is granted to transmit a multi-block Job Data message."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": "GRANT"
+         },
+         "S16F15": {
+            "doc": [
+               "PRJobMultiCreate",
+               "Use this single message to Create Multiple Process Jobs, each of which may be unique in its association of material to process recipe.",
+               "If multi-block, this message must be preceded by the S16F1/F2 transaction.",
+               "Exception: The list for specifying material is empty when no material is specified for the process job.",
+               "The form of data for item 3 depends on the value in MF."
+            ],
+            "block": "multiple",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "DATAID",
+               [[
+                  "PRJOBID",
+                  "MF",
+                  {"or": [
+                     [
+                        [
+                           "CARRIERID",
+                           [
+                              "SLOTID",
+                              "..."
+                           ]
+                        ],
+                        "..."
+                     ],
+                     [
+                        "MID",
+                        "..."
+                     ]
+                  ]},
+                  [
+                     "PRRECIPEMETHOD",
+                     "RCPSPEC",
+                     [
+                        [
+                           "RCPPARNM",
+                           "RCPPARVAL"
+                        ],
+                        "..."
+                     ]
+                  ],
+                  "PRPROCESSSTART",
+                  "PRPAUSEEVENT"
+               ]]
+            ]
+         },
+         "S16F16": {
+            "doc": [
+               "PRJobMultiCreate Acknowledge",
+               "This message acknowledges the request and reports any errors in the creation of a process job.",
+               "ERRTEXT contains the identifier of process jobs that were not created.",
+               "Exception: If the list of errors is empty then no errors exist."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": [
+               [
+                  "PRJOBID",
+                  "..."
+               ],
+               [
+                  "ACKA",
+                  [
+                     [
+                        "ERRCODE",
+                        "ERRTEXT"
+                     ],
+                     "..."
+                  ]
+               ]
+            ]
+         },
+         "S16F17": {
+            "doc": [
+               "RJobDequeue",
+               "Used to remove process jobs from the equipment for jobs that have not begun processing.",
+               "Exception: If the list size = 0, then de-queue all."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true,
+            "body": [
+               "PRJOBID",
+               "..."
+            ]
+         },
+         "S16F18": {
+            "doc": [
+               "PRJobDequeue Acknowledge",
+               "Acknowledge the request to de-queue and report any errors.",
+               "ERRTEXT will contain the identifier of any jobs that were not de-queued.",
+               "Exception: If error list size = 0, no errors exist."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": [
+               [
+                  "PRJOBID",
+                  "..."
+               ],
+               [
+                  "ACKA",
+                  [
+                     [
+                        "ERRCODE",
+                        "ERRTEXT"
+                     ],
+                     "..."
+                  ]
+               ]
+            ]
+         },
+         "S16F19": {
+            "doc": [
+               "PRGetAllJobs",
+               "Requests the equipment to return a list of process jobs which have not completed.",
+               "They may be running or waiting to run."
+            ],
+            "block": "single",
+            "direction": "h->e",
+            "reply": true
+         },
+         "S16F20": {
+            "doc": [
+               "PRGetAllJobs Send",
+               "Returns the requested list of process jobs.",
+               "Exception: If the list of jobs = 0, then no process jobs are running or waiting to run."
+            ],
+            "block": "single",
+            "direction": "h<-e",
+            "body": [
+               [
+                  "PRJOBID",
+                  "PRSTATE"
+               ],
+               "..."
+            ]
+         }
+      }
+   }
+}

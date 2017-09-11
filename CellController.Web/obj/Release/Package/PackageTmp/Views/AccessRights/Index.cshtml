@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+
+@section content {
+
+    <link href="~/Content/CustomPanel.css" rel="stylesheet" />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Manage Access Rights</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div class="col-md-12">
+                            <div class="form-group col-md-12">
+                                <label for="ddUserGroup">User Role:</label>
+                                <select id="ddUserGroup" class="form-control">
+                                    <option selected disabled>Select User Role</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12" id="divModule">
+
+                        </div>
+                        <div class="col-md-12">&nbsp;</div>
+                        <div class="col-md-12" style="text-align:center;">
+                            <button id="btnSave" class="btn btn-info">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section JavaScript {
+    <script src="~/Scripts/pages/admin/accessrights.js"></script>
+}

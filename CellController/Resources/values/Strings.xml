@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">CellController</string>
+    <string name="SignalRServer">ampiappdev1</string>
+    <string name="SignalRServerPort">8090</string>
+    <string name="IgnitionServer">ampiigntest</string>
+    <!--<string name="IgnitionServerPort">8088</string>-->
+    <!--Make sure to not delete the "/" in between the web dev library-->
+    <string name="IgnitionWebDevLibrary">/main/system/webdev/CellControllerIgnitionWebService/</string>
+</resources>

@@ -1,0 +1,378 @@
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\CellController.dll
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\CellController.pdb
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\CellController.CellController.apk
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\CellController.CellController-Signed.apk
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\AChartEngine.Bindings.XamarinAndroid.dll
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\Newtonsoft.Json.dll
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\System.Net.Http.Extensions.dll
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\bin\Debug\System.Net.Http.Primitives.dll
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\CellController.dll
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\CellController.pdb
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\android\bin\CellController.CellController.apk
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\res\layout\equipment.xml
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\res\values\strings.xml
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\icon.png
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\equipmentborder.xml
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\oval.xml
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\unplugged.png
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\R.cs.flag
+c:\users\rherejias\documents\visual studio 2015\Projects\CellController\CellController\obj\Debug\uploadflags.txt
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\layout\login.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\ghostbutton.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\allegro_bg.png
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\underline.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\values\style.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\splashscreen.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\allegro.png
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\layout\online.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\redbutton.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\reddesign.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\cancel.png
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\return2.png
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\greenbutton.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\greendesign.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\lock.png
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\layout\idle.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\bluebutton.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\trackindesign.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\trackoutdesign.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\trackin2.png
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\trackout3.png
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\layout\trackin.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\commentbox.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\layout\offline.xml
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\res\drawable\notification.png
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\obj\Debug\CellController.dll.mdb
+C:\Users\rherejias\Documents\Visual Studio 2015\Projects\CellController\CellController\bin\Debug\CellController.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\CellController.dll
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\CellController.pdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\CellController.CellController.apk
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\CellController.CellController-Signed.apk
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\CellController.dll
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\CellController.pdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\bin\CellController.CellController.apk
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\layout\login.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\layout\online.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\layout\idle.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\layout\trackin.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\layout\offline.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\layout\equipment.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\values\strings.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\icon.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\equipmentborder.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\oval.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\unplugged.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\ghostbutton.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\allegro_bg.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\underline.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\values\style.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\splashscreen.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\allegro.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\redbutton.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\reddesign.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\cancel.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\return2.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\greenbutton.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\greendesign.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\lock.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\bluebutton.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\trackindesign.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\trackoutdesign.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\trackin2.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\trackout3.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\commentbox.xml
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\res\drawable\notification.png
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\R.cs.flag
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\uploadflags.txt
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\Mono.Android.dll
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\mscorlib.dll
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Core.dll
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.dll
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\CellController.csprojResolveAssemblyReference.cache
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\CellController.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\Java.Interop.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\Microsoft.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\Mono.Android.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\Mono.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\mscorlib.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Core.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Net.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Xml.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\CellController.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\Mono.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.Net.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\wmorata\Desktop\CellController\CellController\CellController\obj\Debug\CellController.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\CellController.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\CellController.pdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\CellController.CellController.apk
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\CellController.CellController-Signed.apk
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\Mono.Android.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\mscorlib.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Core.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\CellController.dll
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\CellController.pdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\bin\CellController.CellController.apk
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\layout\login.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\layout\online.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\layout\idle.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\layout\trackin.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\layout\offline.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\layout\equipment.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\values\strings.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\icon.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\equipmentborder.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\oval.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\unplugged.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\ghostbutton.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\allegro_bg.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\underline.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\values\style.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\splashscreen.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\allegro.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\redbutton.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\reddesign.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\cancel.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\return2.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\greenbutton.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\greendesign.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\lock.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\bluebutton.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\trackindesign.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\trackoutdesign.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\trackin2.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\trackout3.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\commentbox.xml
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\res\drawable\notification.png
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\R.cs.flag
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\uploadflags.txt
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\CellController.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\CellController.csprojResolveAssemblyReference.cache
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\Java.Interop.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\Microsoft.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\Mono.Android.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\Mono.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\mscorlib.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Core.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Net.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Xml.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\CellController.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\Mono.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.Net.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\wmorata\Desktop\Projects\Stable Backups\CC.SignalR\CellController\obj\Debug\CellController.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\CellController.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\CellController.pdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\CellController.CellController.apk
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\CellController.CellController-Signed.apk
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\Mono.Android.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\mscorlib.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Core.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\CellController.dll
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\CellController.pdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\bin\CellController.CellController.apk
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\layout\login.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\layout\online.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\layout\idle.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\layout\trackin.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\layout\offline.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\layout\equipment.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\values\strings.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\icon.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\equipmentborder.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\oval.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\unplugged.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\ghostbutton.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\allegro_bg.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\underline.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\values\style.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\splashscreen.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\allegro.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\redbutton.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\reddesign.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\cancel.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\return2.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\greenbutton.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\greendesign.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\lock.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\bluebutton.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\trackindesign.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\trackoutdesign.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\trackin2.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\trackout3.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\commentbox.xml
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\res\drawable\notification.png
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\R.cs.flag
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\uploadflags.txt
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\CellController.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\CellController.csprojResolveAssemblyReference.cache
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\Java.Interop.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\Microsoft.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\Mono.Android.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\Mono.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\mscorlib.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Core.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Net.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Xml.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\CellController.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\Mono.CSharp.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.Net.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\wmorata\Desktop\Dev\CC.SignalR\CellController\obj\Debug\CellController.dll.mdb
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\CellController.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\CellController.pdb
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\CellController.CellController.apk
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\CellController.CellController-Signed.apk
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\Mono.Android.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\mscorlib.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\System.Core.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\System.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\CellController.dll
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\CellController.pdb
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\android\bin\CellController.CellController.apk
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\layout\login.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\layout\online.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\layout\idle.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\layout\trackin.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\layout\offline.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\layout\equipment.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\values\strings.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\icon.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\equipmentborder.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\oval.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\unplugged.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\ghostbutton.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\allegro_bg.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\underline.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\values\style.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\splashscreen.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\allegro.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\redbutton.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\reddesign.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\cancel.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\return2.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\greenbutton.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\greendesign.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\lock.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\bluebutton.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\trackindesign.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\trackoutdesign.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\trackin2.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\trackout3.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\commentbox.xml
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\res\drawable\notification.png
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\R.cs.flag
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\uploadflags.txt
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\CellController.csprojResolveAssemblyReference.cache
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\obj\Debug\CellController.dll.mdb
+C:\Users\wmorata\Desktop\Dev\AMPI.CellController\CellController\bin\Debug\CellController.dll.mdb
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\CellController.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\CellController.pdb
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\CellController.CellController.apk
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\CellController.CellController-Signed.apk
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\Mono.Android.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\mscorlib.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\System.Core.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\System.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\System.Xml.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\System.Xml.Linq.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\CellController.dll
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\CellController.pdb
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\android\bin\CellController.CellController.apk
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\layout\login.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\layout\online.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\layout\idle.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\layout\trackin.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\layout\offline.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\layout\equipment.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\values\strings.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\icon.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\equipmentborder.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\oval.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\unplugged.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\ghostbutton.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\allegro_bg.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\underline.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\values\style.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\splashscreen.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\allegro.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\redbutton.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\reddesign.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\cancel.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\return2.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\greenbutton.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\greendesign.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\lock.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\bluebutton.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\trackindesign.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\trackoutdesign.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\trackin2.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\trackout3.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\commentbox.xml
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\res\drawable\notification.png
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\R.cs.flag
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\uploadflags.txt
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\obj\Debug\CellController.dll.mdb
+C:\Users\wmorata\Source\Repos\IgnitionCellController\CellController\bin\Debug\CellController.dll.mdb

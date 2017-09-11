@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+
+@section content
+{
+    <link rel="stylesheet" href="~/Content/CustomPanel.css" />
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-custom-myheading">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">My Account</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br />
+                        <div class="col-md-12">
+                            <div class="form-group col-md-12">
+                                <label for="txtUsername">Username:</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="txtUsername" placeholder="Username">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" id="btnGetDetails" onclick="notification_modal_confirm_AD();">
+                                            <span id="spanGetDetails">Get AD Details</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtUserGroup">User Role:</label>
+                                <input type="text" class="form-control" id="txtUserGroup" disabled="disabled" placeholder="User Group">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtFirstName">First Name:</label>
+                                <input type="text" class="form-control" id="txtFirstName" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtLastName">Last Name:</label>
+                                <input type="text" class="form-control" id="txtLastName" placeholder="Last Name">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtMiddleName">Middle Initial:</label>
+                                <input type="text" class="form-control" id="txtMiddleName" placeholder="Middle Initial">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtCurrentPassword">Current Password:</label>
+                                <input type="password" class="form-control" id="txtCurrentPassword" placeholder="Current Password">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtPassword">New Password:</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="txtPassword" placeholder="New Password">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" id="btnSetPassword" onclick="notification_modal_confirm_password();">
+                                            <span id="spanSetPassword">Set Default Password</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtConfirmPassword">Confirm New Password:</label>
+                                <input type="password" class="form-control" id="txtConfirmPassword" placeholder="Confirm New Password">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="txtEmail">Email:</label>
+                                <input type="text" class="form-control" id="txtEmail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="text-align:center;">
+                            <button id="btnSave" class="btn btn-info">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+@section JavaScript
+{
+    <script src="~/Scripts/pages/myaccount.js"></script>
+}
